@@ -3,8 +3,9 @@
 <p><a href="https://gitter.im/L-space/L-space"><img src="https://badges.gitter.im/gitterHQ/gitter.png" alt="Gitter chat" /></a>
 <a href="https://waffle.io/L-space/L-space"><img src="https://badge.waffle.io/L-space/L-space.svg?columns=all" alt="Waffle.io - Columns and their card count" /></a></p>
 
-<p><a href="https://travis-ci.org/L-space/L-space"><img src="https://travis-ci.org/L-space/L-space.svg" alt="Build Status" /></a>
-<a href="https://codecov.io/gh/L-space/L-space"><img src="https://codecov.io/gh/L-space/L-space/branch/master/graph/badge.svg" alt="codecov" /></a></p>
+<p><a href="https://travis-ci.com/L-space/L-space"><img src="https://travis-ci.com/L-space/L-space.svg" alt="Build Status" /></a>
+<a href="https://codecov.io/gh/L-space/L-space"><img src="https://codecov.io/gh/L-space/L-space/branch/master/graph/badge.svg" alt="codecov" /></a>
+<a href="https://scala-steward.org"><img src="https://img.shields.io/badge/Scala_Steward-helping-brightgreen.svg?style=flat&amp;logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAVFBMVEUAAACHjojlOy5NWlrKzcYRKjGFjIbp293YycuLa3pYY2LSqql4f3pCUFTgSjNodYRmcXUsPD/NTTbjRS+2jomhgnzNc223cGvZS0HaSD0XLjbaSjElhIr+AAAAAXRSTlMAQObYZgAAAHlJREFUCNdNyosOwyAIhWHAQS1Vt7a77/3fcxxdmv0xwmckutAR1nkm4ggbyEcg/wWmlGLDAA3oL50xi6fk5ffZ3E2E3QfZDCcCN2YtbEWZt+Drc6u6rlqv7Uk0LdKqqr5rk2UCRXOk0vmQKGfc94nOJyQjouF9H/wCc9gECEYfONoAAAAASUVORK5CYII=" alt="Scala Steward badge" /></a></p>
 
 <p>L-space, a graph computing framework for Scala.</p>
 
@@ -19,7 +20,7 @@ Hence, steps are defined to instruct the Librarian how to travel.</p>
 <p>L-space is available for Scala 2.11.x and 2.12.x. 
 To include <code class="highlighter-rouge">lspace-core</code> (all core structures and basic implementations (in-memory) of the graph, 
 data-models and traversal-engines) add the following to your <code class="highlighter-rouge">build.sbt</code>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "eu.l-space" %% "lspace-core" % "0.6.0.13+10-5772e05e-SNAPSHOT"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "eu.l-space" %% "lspace-core" % "0.6.0.14+15-251cf488-SNAPSHOT"
 </code></pre></div></div>
 <p>Basic minimal import:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import lspace._
@@ -37,8 +38,8 @@ import lspace.Implicits.StandardGuide.guide
   <li><code class="highlighter-rouge">lspace-services</code>: basic implementation for a rest service which accepts Librarian queries in Json-LD and returns results in Json-LD</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "eu.l-space" %% "{lspace-xxx}" % "0.6.0.13+10-5772e05e-SNAPSHOT"
-libraryDependencies += "eu.l-space" %% "{lspace-xxx-tests}" % "0.6.0.13+10-5772e05e-SNAPSHOT"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "eu.l-space" %% "{lspace-xxx}" % "0.6.0.14+15-251cf488-SNAPSHOT"
+libraryDependencies += "eu.l-space" %% "{lspace-xxx-tests}" % "0.6.0.14+15-251cf488-SNAPSHOT"
 </code></pre></div></div>
 
 <h2 id="examples">Examples</h2>
