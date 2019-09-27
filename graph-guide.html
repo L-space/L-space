@@ -76,10 +76,10 @@ scala&gt;  scala.concurrent.Await.ready(lspace.util.SampleGraph.loadSocial(graph
 res0: monix.execution.CancelableFuture[AnyRef{val places: AnyRef{val SanJosédeMaipo: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val CrystalSprings: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.ut...
 
 scala&gt;  val labels = SampleGraph.ontologies
-labels: lspace.util.SampleGraph.ontologies.type = lspace.util.SampleGraph$ontologies$@2c851cf9
+labels: lspace.util.SampleGraph.ontologies.type = lspace.util.SampleGraph$ontologies$@64fc9837
 
 scala&gt;  val keys = SampleGraph.properties
-keys: lspace.util.SampleGraph.properties.type = lspace.util.SampleGraph$properties$@12e26c36
+keys: lspace.util.SampleGraph.properties.type = lspace.util.SampleGraph$properties$@1ff53620
 </code></pre>
 
 <h2 id="how-to-use">How to use</h2>
@@ -111,30 +111,30 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>hasIri</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">)</span>
-<span class="c1">// res1: monix.reactive.Observable[lspace.structure.Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@4c0e6820
+<span class="c1">// res1: monix.reactive.Observable[lspace.structure.Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@849a34e
 </span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">,</span> <span class="s">"graph-doc/person/123"</span><span class="o">)</span>
-<span class="c1">// res2: monix.reactive.Observable[lspace.structure.Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@4227f844
+<span class="c1">// res2: monix.reactive.Observable[lspace.structure.Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@19dcb7e
 </span></code></pre></div></div>
 
 <p>hasId</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasId</span><span class="o">(</span><span class="mi">1001L</span><span class="o">).</span><span class="py">id</span>
-<span class="c1">// res3: monix.eval.Task[Option[Long]] = Task.Map$455083676
+<span class="c1">// res3: monix.eval.Task[Option[Long]] = Task.Map$1957819175
 </span></code></pre></div></div>
 
 <p>upsert</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal"</span><span class="o">)</span>
-<span class="c1">// res4: monix.eval.Task[lspace.structure.Value[String]] = Task.FlatMap$1585474420
+<span class="c1">// res4: monix.eval.Task[lspace.structure.Value[String]] = Task.FlatMap$702569086
 </span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal"</span><span class="o">)</span> <span class="c1">//should be equal because values are deduplicated
-// res5: monix.eval.Task[lspace.structure.Value[String]] = Task.FlatMap$998849347
+// res5: monix.eval.Task[lspace.structure.Value[String]] = Task.FlatMap$364523025
 </span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal2"</span><span class="o">)</span> <span class="c1">//new value, hence new id
-// res6: monix.eval.Task[lspace.structure.Value[String]] = Task.FlatMap$1623789097
+// res6: monix.eval.Task[lspace.structure.Value[String]] = Task.FlatMap$1472306716
 </span></code></pre></div></div>
 <p>count:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
-<span class="c1">// res7: monix.eval.Task[Long] = Task.Map$312964256
+<span class="c1">// res7: monix.eval.Task[Long] = Task.Map$584573242
 </span></code></pre></div></div>
 
 <h4 id="resource">Resource</h4>
@@ -145,20 +145,20 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>Retrieved by Iri(s)/Uri(s):</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">)</span>
-<span class="c1">// res8: monix.reactive.Observable[lspace.structure.Node] = monix.reactive.internal.operators.ConcatMapObservable@47e4c200
+<span class="c1">// res8: monix.reactive.Observable[lspace.structure.Node] = monix.reactive.internal.operators.ConcatMapObservable@43c7a15b
 </span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">,</span> <span class="s">"graph-doc/person/123"</span><span class="o">)</span>
-<span class="c1">// res9: monix.reactive.Observable[lspace.structure.Node] = monix.reactive.internal.operators.ConcatMapObservable@31c3325d
+<span class="c1">// res9: monix.reactive.Observable[lspace.structure.Node] = monix.reactive.internal.operators.ConcatMapObservable@25a7c473
 </span></code></pre></div></div>
 
 <p>Retrieved by Id(s):</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasId</span><span class="o">(</span><span class="mi">1002L</span><span class="o">)</span>
-<span class="c1">// res10: monix.eval.Task[Option[lspace.structure.Node]] = Task.Eval$1068458830
+<span class="c1">// res10: monix.eval.Task[Option[lspace.structure.Node]] = Task.Eval$1294607676
 </span></code></pre></div></div>
 
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
-<span class="c1">// res11: monix.eval.Task[Long] = Task.Eval$288634781
+<span class="c1">// res11: monix.eval.Task[Long] = Task.Eval$1773038968
 </span></code></pre></div></div>
 
 <h4 id="node">Node</h4>
@@ -169,7 +169,7 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">edges</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
-<span class="c1">// res12: monix.eval.Task[Long] = Task.Eval$1616614926
+<span class="c1">// res12: monix.eval.Task[Long] = Task.Eval$794922619
 </span></code></pre></div></div>
 
 <h4 id="edge">Edge</h4>
@@ -179,7 +179,7 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
-<span class="c1">// res13: monix.eval.Task[Long] = Task.Eval$884265580
+<span class="c1">// res13: monix.eval.Task[Long] = Task.Eval$455470476
 </span></code></pre></div></div>
 
 <h4 id="value">Value</h4>
