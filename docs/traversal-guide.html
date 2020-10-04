@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>L-space: Traversal guide</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Thijs Broersen" /><meta name="description" content="L-space, a graph computing framework for Scala" /><meta name="og:image" content="/l-space/img/poster.png" /><meta name="image" property="og:image" content="/l-space/img/poster.png" /><meta name="og:title" content="L-space: Traversal guide" /><meta name="title" property="og:title" content="L-space: Traversal guide" /><meta name="og:site_name" content="L-space" /><meta name="og:url" content="https://docs.l-space.eu" /><meta name="og:type" content="website" /><meta name="og:description" content="L-space, a graph computing framework for Scala" /><link rel="icon" type="image/png" href="/l-space/img/favicon.png" /><meta name="twitter:title" content="L-space: Traversal guide" /><meta name="twitter:image" content="https://docs.l-space.eu/l-space/img/poster.png" /><meta name="twitter:description" content="L-space, a graph computing framework for Scala" /><meta name="twitter:card" content="summary_large_image" /><link rel="icon" type="image/png" sizes="16x16" href="/l-space/img/favicon16x16.png" /><link rel="icon" type="image/png" sizes="24x24" href="/l-space/img/favicon24x24.png" /><link rel="icon" type="image/png" sizes="32x32" href="/l-space/img/favicon32x32.png" /><link rel="icon" type="image/png" sizes="48x48" href="/l-space/img/favicon48x48.png" /><link rel="icon" type="image/png" sizes="57x57" href="/l-space/img/favicon57x57.png" /><link rel="icon" type="image/png" sizes="60x60" href="/l-space/img/favicon60x60.png" /><link rel="icon" type="image/png" sizes="64x64" href="/l-space/img/favicon64x64.png" /><link rel="icon" type="image/png" sizes="70x70" href="/l-space/img/favicon70x70.png" /><link rel="icon" type="image/png" sizes="72x72" href="/l-space/img/favicon72x72.png" /><link rel="icon" type="image/png" sizes="76x76" href="/l-space/img/favicon76x76.png" /><link rel="icon" type="image/png" sizes="96x96" href="/l-space/img/favicon96x96.png" /><link rel="icon" type="image/png" sizes="114x114" href="/l-space/img/favicon114x114.png" /><link rel="icon" type="image/png" sizes="120x120" href="/l-space/img/favicon120x120.png" /><link rel="icon" type="image/png" sizes="128x128" href="/l-space/img/favicon128x128.png" /><link rel="icon" type="image/png" sizes="144x144" href="/l-space/img/favicon144x144.png" /><link rel="icon" type="image/png" sizes="150x150" href="/l-space/img/favicon150x150.png" /><link rel="icon" type="image/png" sizes="152x152" href="/l-space/img/favicon152x152.png" /><link rel="icon" type="image/png" sizes="196x196" href="/l-space/img/favicon196x196.png" /><link rel="icon" type="image/png" sizes="310x310" href="/l-space/img/favicon310x310.png" /><link rel="icon" type="image/png" sizes="310x150" href="/l-space/img/favicon310x150.png" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/l-space/highlight/styles/vs.css" /><link rel="stylesheet" href="/l-space/css/light-style.css" /></head><body class="docs"><div id="wrapper"><div id="sidebar-wrapper"><div id="sidebar-brand"><a href="/l-space/" class="brand"><div class="brand-wrapper"></div><span>L-space</span></a><button id="main-toggle" class="sidebar-toggle"><span class="close"></span></button></div><div class="sidebar-nav"><li><a href="/l-space/docs/changelog.html" class="">Changelog</a></li><li><a href="/l-space/docs/codec-guide.html" class="">Codec guide</a></li><li><a href="/l-space/docs/design.html" class="">Design</a></li><li><a href="/l-space/docs/graph-guide.html" class="">Graph guide</a></li><li><a href="/l-space/css/light-style.css" class=""></a></li><li><a href="/l-space/docs/traversal-guide.html" class="active">Traversal guide</a></li></div></div><div id="page-content-wrapper"><div class="nav"><div class="container-fluid"><div class="row"><div class="col-lg-12"><div class="action-menu pull-left clearfix"><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></div><ul class="pull-right"><li id="gh-eyes-item" class="hidden-xs"><a href="https://github.com/L-space/L-space" target="_blank" rel="noopener noreferrer"><i class="fa fa-eye"></i><span>Watchers<span id="eyes" class="label label-default">--</span></span></a></li><li id="gh-stars-item" class="hidden-xs"><a href="https://github.com/L-space/L-space" target="_blank" rel="noopener noreferrer"><i class="fa fa-star-o"></i><span>Stars<span id="stars" class="label label-default">--</span></span></a></li></ul></div></div></div></div><div id="content" data-github-owner="L-space" data-github-repo="L-space"><div class="content-wrapper"><section><h1 id="traversal-guide">Traversal Guide</h1>
+<!DOCTYPE html><html><head><title>L-space: Traversal guide</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Thijs Broersen" /><meta name="description" content="L-space, a graph computing framework for Scala" /><meta name="og:image" content="/img/poster.png" /><meta name="image" property="og:image" content="/img/poster.png" /><meta name="og:title" content="L-space: Traversal guide" /><meta name="title" property="og:title" content="L-space: Traversal guide" /><meta name="og:site_name" content="L-space" /><meta name="og:url" content="https://docs.l-space.eu" /><meta name="og:type" content="website" /><meta name="og:description" content="L-space, a graph computing framework for Scala" /><link rel="icon" type="image/png" href="/img/favicon.png" /><meta name="twitter:title" content="L-space: Traversal guide" /><meta name="twitter:image" content="https://docs.l-space.eu/img/poster.png" /><meta name="twitter:description" content="L-space, a graph computing framework for Scala" /><meta name="twitter:card" content="summary_large_image" /><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon16x16.png" /><link rel="icon" type="image/png" sizes="24x24" href="/img/favicon24x24.png" /><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon32x32.png" /><link rel="icon" type="image/png" sizes="48x48" href="/img/favicon48x48.png" /><link rel="icon" type="image/png" sizes="57x57" href="/img/favicon57x57.png" /><link rel="icon" type="image/png" sizes="60x60" href="/img/favicon60x60.png" /><link rel="icon" type="image/png" sizes="64x64" href="/img/favicon64x64.png" /><link rel="icon" type="image/png" sizes="70x70" href="/img/favicon70x70.png" /><link rel="icon" type="image/png" sizes="72x72" href="/img/favicon72x72.png" /><link rel="icon" type="image/png" sizes="76x76" href="/img/favicon76x76.png" /><link rel="icon" type="image/png" sizes="96x96" href="/img/favicon96x96.png" /><link rel="icon" type="image/png" sizes="114x114" href="/img/favicon114x114.png" /><link rel="icon" type="image/png" sizes="120x120" href="/img/favicon120x120.png" /><link rel="icon" type="image/png" sizes="128x128" href="/img/favicon128x128.png" /><link rel="icon" type="image/png" sizes="144x144" href="/img/favicon144x144.png" /><link rel="icon" type="image/png" sizes="150x150" href="/img/favicon150x150.png" /><link rel="icon" type="image/png" sizes="152x152" href="/img/favicon152x152.png" /><link rel="icon" type="image/png" sizes="196x196" href="/img/favicon196x196.png" /><link rel="icon" type="image/png" sizes="310x310" href="/img/favicon310x310.png" /><link rel="icon" type="image/png" sizes="310x150" href="/img/favicon310x150.png" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/highlight/styles/vs.css" /><link rel="stylesheet" href="/css/light-style.css" /></head><body class="docs"><div id="wrapper"><div id="sidebar-wrapper"><div id="sidebar-brand"><a href="/" class="brand"><div class="brand-wrapper"></div><span>L-space</span></a><button id="main-toggle" class="sidebar-toggle"><span class="close"></span></button></div><div class="sidebar-nav"><li><a href="/docs/changelog.html" class="">Changelog</a></li><li><a href="/docs/codec-guide.html" class="">Codec guide</a></li><li><a href="/docs/design.html" class="">Design</a></li><li><a href="/docs/graph-guide.html" class="">Graph guide</a></li><li><a href="/css/light-style.css" class=""></a></li><li><a href="/docs/traversal-guide.html" class="active">Traversal guide</a></li></div></div><div id="page-content-wrapper"><div class="nav"><div class="container-fluid"><div class="row"><div class="col-lg-12"><div class="action-menu pull-left clearfix"><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></div><ul class="pull-right"><li id="gh-eyes-item" class="hidden-xs"><a href="https://github.com/L-space/L-space" target="_blank" rel="noopener noreferrer"><i class="fa fa-eye"></i><span>Watchers<span id="eyes" class="label label-default">--</span></span></a></li><li id="gh-stars-item" class="hidden-xs"><a href="https://github.com/L-space/L-space" target="_blank" rel="noopener noreferrer"><i class="fa fa-star-o"></i><span>Stars<span id="stars" class="label label-default">--</span></span></a></li></ul></div></div></div></div><div id="content" data-github-owner="L-space" data-github-repo="L-space"><div class="content-wrapper"><section><h1 id="traversal-guide">Traversal Guide</h1>
 <ul>
   <li><a href="#overview">Overview</a></li>
   <li><a href="#the-traverser">The traverser</a></li>
@@ -167,13 +167,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="k">import</span> <span class="nn">scala.concurrent.duration._</span>
 <span class="nv">scala</span><span class="o">.</span><span class="py">concurrent</span><span class="o">.</span><span class="py">Await</span><span class="o">.</span><span class="py">ready</span><span class="o">(</span><span class="nv">lspace</span><span class="o">.</span><span class="py">util</span><span class="o">.</span><span class="py">SampleGraph</span><span class="o">.</span><span class="py">loadSocial</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">runToFuture</span><span class="o">,</span> <span class="mf">5.</span><span class="n">seconds</span><span class="o">)</span>
 <span class="c1">// res0: monix.execution.CancelableFuture[{val places: AnyRef{val SanJosédeMaipo: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val CrystalSprings: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Haridwar: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Talca: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}};val persons: AnyRef{val Yoshio: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Levi: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Gray: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Kevin: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Stan: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Garrison: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}};val knows: AnyRef{val GarrissonKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GarrissonKnownKevin: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownGray: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GrayKnowsLevi: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val LeviKnowsYoshio: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node])}}] = Async(</span>
-<span class="c1">//   Future(Success(lspace.util.SampleGraph$$anon$15@11d05430)),</span>
-<span class="c1">//   monix.eval.internal.TaskConnection$Impl$$anon$1@3060e25e</span>
+<span class="c1">//   Future(Success(lspace.util.SampleGraph$$anon$15@70d0d3b)),</span>
+<span class="c1">//   monix.eval.internal.TaskConnection$Impl$$anon$1@4782f31e</span>
 <span class="c1">// )</span>
 <span class="k">val</span> <span class="nv">labels</span> <span class="k">=</span> <span class="nv">SampleGraph</span><span class="o">.</span><span class="py">ontologies</span>
-<span class="c1">// labels: SampleGraph.ontologies.type = lspace.util.SampleGraph$ontologies$@3203d504</span>
+<span class="c1">// labels: SampleGraph.ontologies.type = lspace.util.SampleGraph$ontologies$@2afa6db</span>
 <span class="k">val</span> <span class="nv">keys</span> <span class="k">=</span> <span class="nv">SampleGraph</span><span class="o">.</span><span class="py">properties</span>
-<span class="c1">// keys: SampleGraph.properties.type = lspace.util.SampleGraph$properties$@68e7c3a7</span>
+<span class="c1">// keys: SampleGraph.properties.type = lspace.util.SampleGraph$properties$@5e86266c</span>
 </code></pre></div></div>
 <h4 id="n">N</h4>
 <p>N-step is a node selection step</p>
@@ -193,18 +193,18 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   "Garrison",</span>
 <span class="c1">//   "Haridwar",</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "Gray",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Stan",</span>
-<span class="c1">//   "Crystal Springs",</span>
-<span class="c1">//   "Levi"</span>
+<span class="c1">//   "Levi",</span>
+<span class="c1">//   "Crystal Springs"</span>
 <span class="c1">// ) //filters on nodes which have an edge with property "name"</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">eqv</span><span class="o">(</span><span class="s">"Garrison"</span><span class="o">)).</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//adds an equality constraint with value "Alice"</span>
 <span class="c1">// res2: List[Any] = List("Garrison") //adds an equality constraint with value "Alice"</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">birthDate</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gt</span><span class="o">(</span><span class="nv">LocalDate</span><span class="o">.</span><span class="py">parse</span><span class="o">(</span><span class="s">"2002-06-13"</span><span class="o">))).</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
-<span class="c1">// res3: List[Long] = List(1260L, 1212L)</span>
+<span class="c1">// res3: List[Long] = List(1260L, 1210L)</span>
 </code></pre></div></div>
 <h5 id="hasnot">HasNot</h5>
 <p>HasNot-step is the inverse of a Has-step (this could also be written as <code class="language-plaintext highlighter-rouge">.not(_.has(..))</code>)</p>
@@ -250,21 +250,9 @@ depending on the nature of the traversal, guide and the result-type the user can
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">count</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//total nodes to draw from</span>
 <span class="c1">// res10: Long = 11L //total nodes to draw from</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">coin</span><span class="o">(</span><span class="mf">0.2</span><span class="o">).</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//random selection of nodes with p = 0.2 (20%)</span>
-<span class="c1">// res11: List[Long] = List(1110L, 1047L, 1084L) //random selection of nodes with p = 0.2 (20%)</span>
+<span class="c1">// res11: List[Long] = List(1001L) //random selection of nodes with p = 0.2 (20%)</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">coin</span><span class="o">(</span><span class="mf">0.8</span><span class="o">).</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//random selection of nodes with p = 0.8 (80%)</span>
-<span class="c1">// res12: List[Long] = List(</span>
-<span class="c1">//   1284L,</span>
-<span class="c1">//   1096L,</span>
-<span class="c1">//   1103L,</span>
-<span class="c1">//   1110L,</span>
-<span class="c1">//   1047L,</span>
-<span class="c1">//   1248L,</span>
-<span class="c1">//   1001L,</span>
-<span class="c1">//   1260L,</span>
-<span class="c1">//   1272L,</span>
-<span class="c1">//   1084L,</span>
-<span class="c1">//   1212L</span>
-<span class="c1">// )</span>
+<span class="c1">// res12: List[Long] = List(1284L, 1096L, 1048L, 1118L, 1260L, 1272L, 1084L)</span>
 </code></pre></div></div>
 <h4 id="where">Where</h4>
 <p>Where-step takes a traversal and filters on non-empty results</p>
@@ -273,13 +261,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   "Garrison",</span>
 <span class="c1">//   "Haridwar",</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "Gray",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Stan",</span>
-<span class="c1">//   "Crystal Springs",</span>
-<span class="c1">//   "Levi"</span>
+<span class="c1">//   "Levi",</span>
+<span class="c1">//   "Crystal Springs"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="and">And</h4>
@@ -310,18 +298,18 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   1994-06-18,</span>
 <span class="c1">//   "Haridwar",</span>
 <span class="c1">//   "Talca",</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
 <span class="c1">//   1996-08-18,</span>
 <span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
 <span class="c1">//   "Gray",</span>
 <span class="c1">//   1997-04-10,</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   2008-11-30,</span>
 <span class="c1">//   "Stan",</span>
 <span class="c1">//   2002-06-13,</span>
-<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   "Levi",</span>
-<span class="c1">//   2008-12-20</span>
+<span class="c1">//   2008-12-20,</span>
+<span class="c1">//   "Crystal Springs"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="not">Not</h4>
@@ -340,13 +328,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Range-step filters by a low-end and high-end index</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">range</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">16</span><span class="o">).</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//takes only node 4 until 16</span>
 <span class="c1">// res19: List[String] = List(</span>
-<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   "librarian-doc/place/123",</span>
+<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   "librarian-doc/person/345",</span>
 <span class="c1">//   "librarian-doc/person/34567",</span>
 <span class="c1">//   "librarian-doc/person/567",</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
-<span class="c1">//   "librarian-doc/person/12345"</span>
+<span class="c1">//   "librarian-doc/person/12345",</span>
+<span class="c1">//   "librarian-doc/place/12345"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="limit">Limit</h4>
@@ -356,13 +344,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   "librarian-doc/person/56789",</span>
 <span class="c1">//   "librarian-doc/place/345",</span>
 <span class="c1">//   "librarian-doc/place/34567",</span>
-<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   "librarian-doc/place/123",</span>
+<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   "librarian-doc/person/345",</span>
 <span class="c1">//   "librarian-doc/person/34567",</span>
 <span class="c1">//   "librarian-doc/person/567",</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
-<span class="c1">//   "librarian-doc/person/12345"</span>
+<span class="c1">//   "librarian-doc/person/12345",</span>
+<span class="c1">//   "librarian-doc/place/12345"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="skip">Skip</h4>
@@ -377,13 +365,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   "librarian-doc/person/56789",</span>
 <span class="c1">//   "librarian-doc/place/345",</span>
 <span class="c1">//   "librarian-doc/place/34567",</span>
-<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   "librarian-doc/place/123",</span>
+<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   "librarian-doc/person/345",</span>
 <span class="c1">//   "librarian-doc/person/34567",</span>
 <span class="c1">//   "librarian-doc/person/567",</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
-<span class="c1">//   "librarian-doc/person/12345"</span>
+<span class="c1">//   "librarian-doc/person/12345",</span>
+<span class="c1">//   "librarian-doc/place/12345"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h3 id="move-steps">Move steps</h3>
@@ -395,13 +383,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   "Garrison",</span>
 <span class="c1">//   "Haridwar",</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "Gray",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Stan",</span>
-<span class="c1">//   "Crystal Springs",</span>
-<span class="c1">//   "Levi"</span>
+<span class="c1">//   "Levi",</span>
+<span class="c1">//   "Crystal Springs"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="oute">OutE</h4>
@@ -410,14 +398,14 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">// res24: List[Edge[Node, Any]] = List(</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e50b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e44f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e456,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e465,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e429,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e459,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e42a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e46e,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4e7,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4f3,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4ff,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e446,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4c8</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4d0,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e446</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="in">In</h4>
@@ -427,13 +415,13 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   "Garrison",</span>
 <span class="c1">//   "Haridwar",</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "Gray",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Stan",</span>
-<span class="c1">//   "Crystal Springs",</span>
-<span class="c1">//   "Levi"</span>
+<span class="c1">//   "Levi",</span>
+<span class="c1">//   "Crystal Springs"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="ine">InE</h4>
@@ -442,14 +430,14 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">// res26: List[Edge[Node, Any]] = List(</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e50b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e44f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e456,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e465,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e429,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e459,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e42a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e46e,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4e7,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4f3,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4ff,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e446,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4c8</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4d0,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e446</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="label">Label</h4>
@@ -459,14 +447,14 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Place,</span>
 <span class="c1">//   ontology:https://example.org/Place,</span>
-<span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Place,</span>
+<span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Address,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
-<span class="c1">//   ontology:https://example.org/Place,</span>
-<span class="c1">//   ontology:https://example.org/Person</span>
+<span class="c1">//   ontology:https://example.org/Person,</span>
+<span class="c1">//   ontology:https://example.org/Place</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h3 id="branche-steps">Branche steps</h3>
@@ -492,37 +480,37 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">//   Point(74.32746, -45.06438),</span>
 <span class="c1">//   "Talca",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
+<span class="c1">//   "librarian-doc/place/123",</span>
+<span class="c1">//   Point(72.0403, 60.90879),</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
 <span class="c1">//   1996-08-18,</span>
 <span class="c1">//   10.34,</span>
 <span class="c1">//   4,</span>
 <span class="c1">//   "Yoshio",</span>
 <span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
-<span class="c1">//   "librarian-doc/place/123",</span>
-<span class="c1">//   Point(72.0403, 60.90879),</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   1997-04-10,</span>
 <span class="c1">//   2230.3,</span>
 <span class="c1">//   1,</span>
 <span class="c1">//   "librarian-doc/person/345",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
 <span class="c1">//   "Gray",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   "888",</span>
 <span class="c1">//   "apples",</span>
 <span class="c1">//   1,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
 <span class="c1">// ... //all incoming and outgoing edges</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">union</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gt</span><span class="o">(</span><span class="mi">300</span><span class="o">)),</span> <span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">lt</span><span class="o">(-</span><span class="mi">200</span><span class="o">))).</span><span class="py">count</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//should be 3</span>
 <span class="c1">// res29: Long = 3L</span>
@@ -535,14 +523,14 @@ upto the traverser at the root the local-traversal</p>
 <span class="c1">//   0.0,</span>
 <span class="c1">//   0.0,</span>
 <span class="c1">//   0.0,</span>
-<span class="c1">//   4.0,</span>
 <span class="c1">//   0.0,</span>
+<span class="c1">//   4.0,</span>
 <span class="c1">//   1.0,</span>
 <span class="c1">//   1.0,</span>
 <span class="c1">//   2.0,</span>
 <span class="c1">//   304.0,</span>
-<span class="c1">//   0.0,</span>
-<span class="c1">//   2.0</span>
+<span class="c1">//   2.0,</span>
+<span class="c1">//   0.0</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="repeat">Repeat</h4>
@@ -577,8 +565,8 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <span class="c1">//   false,</span>
 <span class="c1">//   false,</span>
 <span class="c1">//   false,</span>
-<span class="c1">//   true,</span>
 <span class="c1">//   false,</span>
+<span class="c1">//   true,</span>
 <span class="c1">//   false,</span>
 <span class="c1">//   false,</span>
 <span class="c1">//   false,</span>
@@ -598,14 +586,14 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <span class="c1">//   1284L,</span>
 <span class="c1">//   1096L,</span>
 <span class="c1">//   1103L,</span>
-<span class="c1">//   1110L,</span>
-<span class="c1">//   1047L,</span>
+<span class="c1">//   1048L,</span>
+<span class="c1">//   1118L,</span>
 <span class="c1">//   1248L,</span>
 <span class="c1">//   1001L,</span>
 <span class="c1">//   1260L,</span>
 <span class="c1">//   1272L,</span>
-<span class="c1">//   1084L,</span>
-<span class="c1">//   1212L</span>
+<span class="c1">//   1210L,</span>
+<span class="c1">//   1084L</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="constant">Constant</h4>
@@ -618,53 +606,53 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">E</span><span class="o">.</span><span class="py">from</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res43: List[Any] = List(</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41a,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e429,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41a,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e42a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e446,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e452,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e452,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e452,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e3,</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
 <h4 id="to">To</h4>
@@ -672,53 +660,53 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">E</span><span class="o">.</span><span class="py">to</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res44: List[Any] = List(</span>
 <span class="c1">//   300,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
 <span class="c1">//   4,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
 <span class="c1">//   "librarian-doc/person/56789",</span>
 <span class="c1">//   "Garrison",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
 <span class="c1">//   1994-06-18,</span>
-<span class="c1">//   "apples",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e452,</span>
+<span class="c1">//   "apples",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
-<span class="c1">//   1,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
+<span class="c1">//   1,</span>
+<span class="c1">//   10.34,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
-<span class="c1">//   10.34,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e3,</span>
 <span class="c1">//   "librarian-doc/place/123",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   "San Jos\u00e9 de Maipo",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
 <span class="c1">//   4,</span>
 <span class="c1">//   5L,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
 <span class="c1">//   Point(72.0403, 60.90879),</span>
-<span class="c1">//   "librarian-doc/person/12345",</span>
 <span class="c1">//   "librarian-doc/place/12345",</span>
 <span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   4L,</span>
-<span class="c1">//   "Levi",</span>
+<span class="c1">//   "librarian-doc/person/12345",</span>
 <span class="c1">//   Point(-48.4046, 175.87173),</span>
 <span class="c1">//   "librarian-doc/place/345",</span>
 <span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Levi",</span>
 <span class="c1">//   Point(89.45136, 88.01204),</span>
 <span class="c1">//   "librarian-doc/place/34567",</span>
 <span class="c1">//   2008-12-20,</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   Point(74.32746, -45.06438),</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
-<span class="c1">//   "librarian-doc/person/123",</span>
+<span class="c1">//   Point(74.32746, -45.06438),</span>
 <span class="c1">//   -245.05,</span>
 <span class="c1">//   2,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
+<span class="c1">//   "librarian-doc/person/345",</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
 <h3 id="projection-steps">Projection steps</h3>
@@ -754,7 +742,7 @@ g.N.has("name", P.eqv("Garrison")).outEMap().withGraph(graph).head //should retu
 //   ),
 //   property:https://example.org/knows -&gt; List(
 //     lspace.provider.mem.MemGraph$$anon$8@5db0e510,
-//     lspace.provider.mem.MemGraph$$anon$8@5db0e518
+//     lspace.provider.mem.MemGraph$$anon$8@5db0e517
 //   )
 // )
 </code></pre></div></div>
@@ -771,7 +759,7 @@ g.N.has("name", P.eqv("Garrison")).outEMap().withGraph(graph).head //should retu
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">eqv</span><span class="o">(</span><span class="s">"Garrison"</span><span class="o">)).</span><span class="py">inEMap</span><span class="o">().</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//should return all in-coming edges grouped by key</span>
 <span class="c1">// res47: Map[Property, List[Edge[Any, Node]]] = Map(</span>
 <span class="c1">//   property:https://example.org/knows -&gt; List(</span>
-<span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e519,</span>
+<span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e51a,</span>
 <span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e512</span>
 <span class="c1">//   )</span>
 <span class="c1">// )</span>
@@ -844,7 +832,7 @@ g.N.out("balance").hasLabel(`@double`).mean.withGraph(graph).head //should be 62
 <h4 id="last">Last</h4>
 <p>Last-step takes the last traverser</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">last</span><span class="o">.</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//takes only the last 12 nodes</span>
-<span class="c1">// res56: String = "librarian-doc/person/12345" //takes only the last 12 nodes</span>
+<span class="c1">// res56: String = "librarian-doc/place/12345" //takes only the last 12 nodes</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">group</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">last</span><span class="o">).</span><span class="py">mapValues</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">iri</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//</span>
 <span class="c1">// res57: List[(Option[Any], List[String])] = List(</span>
 <span class="c1">//   (Some("Haridwar"), List("librarian-doc/place/345")),</span>
@@ -882,17 +870,17 @@ g.N.out("balance").hasLabel(`@double`).mean.withGraph(graph).head //should be 62
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e507,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44b,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e452,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e459,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e41b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e461,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e3,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4ef,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4fb,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bf</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e43f</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
-</section></div></div></div></div><script src="/l-space/highlight/highlight.pack.js"></script><script>
+</section></div></div></div></div><script src="/highlight/highlight.pack.js"></script><script>
 // For all code blocks, copy the language from the containing div
 // to the inner code tag (where hljs expects it to be)
 const langPrefix = 'language-';
@@ -910,4 +898,4 @@ document.querySelectorAll(`div[class^='${langPrefix}']`).forEach(function(div) {
 hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlightingOnLoad();
       </script><script>console.info('\x57\x65\x62\x73\x69\x74\x65\x20\x62\x75\x69\x6c\x74\x20\x77\x69\x74\x68\x3a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5f\x5f\x20\x20\x20\x20\x5f\x5f\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5f\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5f\x20\x5f\x5f\x0a\x20\x20\x20\x5f\x5f\x5f\x5f\x5f\x2f\x20\x2f\x5f\x20\x20\x2f\x20\x2f\x5f\x20\x20\x20\x20\x20\x20\x5f\x5f\x5f\x5f\x20\x5f\x5f\x5f\x20\x20\x28\x5f\x29\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x20\x20\x5f\x5f\x5f\x5f\x5f\x28\x5f\x29\x20\x2f\x5f\x5f\x5f\x5f\x20\x20\x5f\x5f\x5f\x5f\x5f\x0a\x20\x20\x2f\x20\x5f\x5f\x5f\x2f\x20\x5f\x5f\x20\x5c\x2f\x20\x5f\x5f\x2f\x5f\x5f\x5f\x5f\x5f\x2f\x20\x5f\x5f\x20\x60\x5f\x5f\x20\x5c\x2f\x20\x2f\x20\x5f\x5f\x5f\x2f\x20\x5f\x5f\x5f\x2f\x20\x5f\x5f\x20\x5c\x2f\x20\x5f\x5f\x5f\x2f\x20\x2f\x20\x5f\x5f\x2f\x20\x5f\x20\x5c\x2f\x20\x5f\x5f\x5f\x2f\x0a\x20\x28\x5f\x5f\x20\x20\x29\x20\x2f\x5f\x2f\x20\x2f\x20\x2f\x5f\x2f\x5f\x5f\x5f\x5f\x5f\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x5f\x5f\x2f\x20\x2f\x20\x20\x2f\x20\x2f\x5f\x2f\x20\x28\x5f\x5f\x20\x20\x29\x20\x2f\x20\x2f\x5f\x2f\x20\x20\x5f\x5f\x28\x5f\x5f\x20\x20\x29\x0a\x2f\x5f\x5f\x5f\x5f\x2f\x5f\x2e\x5f\x5f\x5f\x2f\x5c\x5f\x5f\x2f\x20\x20\x20\x20\x20\x2f\x5f\x2f\x20\x2f\x5f\x2f\x20\x2f\x5f\x2f\x5f\x2f\x5c\x5f\x5f\x5f\x2f\x5f\x2f\x20\x20\x20\x5c\x5f\x5f\x5f\x5f\x2f\x5f\x5f\x5f\x5f\x2f\x5f\x2f\x5c\x5f\x5f\x2f\x5c\x5f\x5f\x5f\x2f\x5f\x5f\x5f\x5f\x2f\x0a\x0a\x68\x74\x74\x70\x73\x3a\x2f\x2f\x34\x37\x64\x65\x67\x2e\x67\x69\x74\x68\x75\x62\x2e\x69\x6f\x2f\x73\x62\x74\x2d\x6d\x69\x63\x72\x6f\x73\x69\x74\x65\x73')</script><script>((window.gitter = {}).chat = {}).options = {
-room: 'L-space/L-space'};</script><script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script><script src="/l-space/js/docs.js"></script></body></html>
+room: 'L-space/L-space'};</script><script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script><script src="/js/docs.js"></script></body></html>
