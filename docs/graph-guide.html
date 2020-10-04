@@ -73,8 +73,8 @@ create a graph
 <p>Before continuing reading and learning, first load some sample-data:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">lspace</span><span class="o">.</span><span class="py">util</span><span class="o">.</span><span class="py">SampleGraph</span><span class="o">.</span><span class="py">loadSocial</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">runToFuture</span>
 <span class="c1">// res0: monix.execution.CancelableFuture[{val places: AnyRef{val SanJosédeMaipo: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val CrystalSprings: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Haridwar: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Talca: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}};val persons: AnyRef{val Yoshio: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Levi: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Gray: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Kevin: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Stan: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Garrison: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}};val knows: AnyRef{val GarrissonKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GarrissonKnownKevin: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownGray: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GrayKnowsLevi: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val LeviKnowsYoshio: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node])}}] = Async(</span>
-<span class="c1">//   Future(Success(lspace.util.SampleGraph$$anon$15@7a36ae80)),</span>
-<span class="c1">//   monix.eval.internal.TaskConnection$Impl$$anon$1@5190299d</span>
+<span class="c1">//   Future(Success(lspace.util.SampleGraph$$anon$15@6b662339)),</span>
+<span class="c1">//   monix.eval.internal.TaskConnection$Impl$$anon$1@7e5a8dab</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
@@ -90,9 +90,9 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>hasIri</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">)</span>
-<span class="c1">// res1: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@5a2ef1eb</span>
+<span class="c1">// res1: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@1705569d</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">,</span> <span class="s">"graph-doc/person/123"</span><span class="o">)</span>
-<span class="c1">// res2: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@73a04b79</span>
+<span class="c1">// res2: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@e42c6e4</span>
 </code></pre></div></div>
 
 <p>hasId</p>
@@ -100,11 +100,11 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <span class="c1">// res3: monix.eval.Task[Option[Long]] = Map(</span>
 <span class="c1">//   FlatMap(</span>
 <span class="c1">//     Eval(</span>
-<span class="c1">//       lspace.provider.mem.store.MemStore$$Lambda$8393/0x0000000801b9f840@115118b8</span>
+<span class="c1">//       lspace.provider.mem.store.MemStore$$Lambda$12457/0x0000000803723840@3b0d00a8</span>
 <span class="c1">//     ),</span>
-<span class="c1">//     lspace.structure.Resources$$Lambda$8394/0x0000000801a33840@605b6268</span>
+<span class="c1">//     lspace.structure.Resources$$Lambda$12458/0x0000000803724040@23e084cb</span>
 <span class="c1">//   ),</span>
-<span class="c1">//   lspace.package$ResourceOptionTask$$Lambda$8395/0x0000000801a2f040@5c211d09,</span>
+<span class="c1">//   lspace.package$ResourceOptionTask$$Lambda$12459/0x0000000803725040@662b2e18,</span>
 <span class="c1">//   0</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
@@ -113,24 +113,24 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal"</span><span class="o">)</span>
 <span class="c1">// res4: monix.eval.Task[Value[String]] = FlatMap(</span>
 <span class="c1">//   Async(&lt;function2&gt;, false, false, true),</span>
-<span class="c1">//   lspace.structure.Values$$Lambda$8396/0x0000000801a30040@5835ab5d</span>
+<span class="c1">//   lspace.structure.Values$$Lambda$12460/0x0000000803726040@2f74b292</span>
 <span class="c1">// )</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal"</span><span class="o">)</span> <span class="c1">//should be equal because values are deduplicated</span>
 <span class="c1">// res5: monix.eval.Task[Value[String]] = FlatMap(</span>
 <span class="c1">//   Async(&lt;function2&gt;, false, false, true),</span>
-<span class="c1">//   lspace.structure.Values$$Lambda$8396/0x0000000801a30040@7f4fa7f6</span>
+<span class="c1">//   lspace.structure.Values$$Lambda$12460/0x0000000803726040@195e9bd6</span>
 <span class="c1">// ) //should be equal because values are deduplicated</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal2"</span><span class="o">)</span> <span class="c1">//new value, hence new id</span>
 <span class="c1">// res6: monix.eval.Task[Value[String]] = FlatMap(</span>
 <span class="c1">//   Async(&lt;function2&gt;, false, false, true),</span>
-<span class="c1">//   lspace.structure.Values$$Lambda$8396/0x0000000801a30040@50a7db32</span>
+<span class="c1">//   lspace.structure.Values$$Lambda$12460/0x0000000803726040@290eeeb7</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <p>count:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res7: monix.eval.Task[Long] = Map(</span>
 <span class="c1">//   Async(&lt;function2&gt;, true, true, true),</span>
-<span class="c1">//   lspace.structure.Resources$$Lambda$8398/0x0000000801a2e840@7406c510,</span>
+<span class="c1">//   lspace.structure.Resources$$Lambda$12462/0x0000000803727040@75b40c98,</span>
 <span class="c1">//   0</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
@@ -143,22 +143,22 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>Retrieved by Iri(s)/Uri(s):</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">)</span>
-<span class="c1">// res8: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@5f496b13</span>
+<span class="c1">// res8: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@28456066</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">,</span> <span class="s">"graph-doc/person/123"</span><span class="o">)</span>
-<span class="c1">// res9: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@623972ec</span>
+<span class="c1">// res9: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@237e9f86</span>
 </code></pre></div></div>
 
 <p>Retrieved by Id(s):</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasId</span><span class="o">(</span><span class="mi">1002L</span><span class="o">)</span>
 <span class="c1">// res10: monix.eval.Task[Option[Node]] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$8393/0x0000000801b9f840@5ece8ec</span>
+<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$12457/0x0000000803723840@7e0c0a9f</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res11: monix.eval.Task[Long] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$8397/0x0000000801a31440@78cfd4fd</span>
+<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$12461/0x0000000803727840@79282ec7</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
@@ -171,7 +171,7 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">edges</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res12: monix.eval.Task[Long] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$8397/0x0000000801a31440@75925d56</span>
+<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$12461/0x0000000803727840@1c9777da</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
@@ -183,7 +183,7 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res13: monix.eval.Task[Long] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$8397/0x0000000801a31440@5c475c3</span>
+<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$12461/0x0000000803727840@448b29e3</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
