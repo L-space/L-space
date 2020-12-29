@@ -73,9 +73,9 @@ create a graph
 <p>Before continuing reading and learning, first load some sample-data:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">lspace</span><span class="o">.</span><span class="py">util</span><span class="o">.</span><span class="py">SampleGraph</span><span class="o">.</span><span class="py">loadSocial</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">runToFuture</span>
 <span class="c1">// res0: monix.execution.CancelableFuture[{val places: AnyRef{val SanJosédeMaipo: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val CrystalSprings: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Haridwar: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Talca: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}};val persons: AnyRef{val Yoshio: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Levi: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Gray: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Kevin: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Stan: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Garrison: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}};val knows: AnyRef{val GarrissonKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GarrissonKnownKevin: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownGray: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GrayKnowsLevi: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val LeviKnowsYoshio: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node])}}] = Async(</span>
-<span class="c1">//   Future(&lt;not completed&gt;),</span>
-<span class="c1">//   monix.eval.internal.TaskConnection$Impl$$anon$1@50a94a89,</span>
-<span class="c1">//   null</span>
+<span class="c1">//   underlying = Future(&lt;not completed&gt;),</span>
+<span class="c1">//   cancelable = monix.eval.internal.TaskConnection$Impl$$anon$1@2fd6de8f,</span>
+<span class="c1">//   isolatedCtx = null</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
@@ -91,67 +91,67 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>hasIri</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">)</span>
-<span class="c1">// res1: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@d57fd6</span>
+<span class="c1">// res1: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@65e5b353</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">,</span> <span class="s">"graph-doc/person/123"</span><span class="o">)</span>
-<span class="c1">// res2: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@2cdb3a94</span>
+<span class="c1">// res2: monix.reactive.Observable[Resource[Any]] = monix.reactive.internal.operators.ConcatMapObservable@7b618679</span>
 </code></pre></div></div>
 
 <p>hasId</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">hasId</span><span class="o">(</span><span class="mi">1001L</span><span class="o">).</span><span class="py">id</span>
 <span class="c1">// res3: monix.eval.Task[Option[Long]] = Map(</span>
-<span class="c1">//   FlatMap(</span>
-<span class="c1">//     Eval(</span>
-<span class="c1">//       lspace.provider.mem.store.MemStore$$Lambda$11045/0x00000008033e8040@15ad875a</span>
+<span class="c1">//   source = FlatMap(</span>
+<span class="c1">//     source = Eval(</span>
+<span class="c1">//       thunk = lspace.provider.mem.store.MemStore$$Lambda$11324/0x0000000803512040@30cb67b4</span>
 <span class="c1">//     ),</span>
-<span class="c1">//     lspace.structure.Resources$$Lambda$11046/0x00000008033e8840@170c3ca,</span>
-<span class="c1">//     StackTrace(</span>
-<span class="c1">//       List(</span>
+<span class="c1">//     f = lspace.structure.Resources$$Lambda$11325/0x0000000803512840@15cf5530,</span>
+<span class="c1">//     trace = StackTrace(</span>
+<span class="c1">//       stackTrace = List(</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildFrame(TaskTracing.scala:52),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildCachedFrame(TaskTracing.scala:43),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.cached(TaskTracing.scala:38),</span>
 <span class="c1">//         monix.eval.Task.flatMap(Task.scala:1792),</span>
 <span class="c1">//         lspace.structure.Resources.hasId(Resources.scala:60),</span>
-<span class="c1">//         repl.Session$App.&lt;init&gt;(graph-guide.md:41),</span>
-<span class="c1">//         repl.Session$.app(graph-guide.md:3),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:82),</span>
+<span class="c1">//         repl.MdocSession$App.&lt;init&gt;(graph-guide.md:41),</span>
+<span class="c1">//         repl.MdocSession$.app(graph-guide.md:3),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//         scala.Console$.withErr(Console.scala:193),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:82),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//         scala.Console$.withOut(Console.scala:164),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.build(DocumentBuilder.scala:81),</span>
-<span class="c1">//         mdoc.internal.markdown.MarkdownCompiler$.buildDocument(MarkdownCompiler.scala:53),</span>
-<span class="c1">//         mdoc.internal.markdown.Processor.processScalaInputs(Processor.scala:133),</span>
-<span class="c1">//         mdoc.internal.markdown.Processor.processDocument(Processor.scala:48),</span>
-<span class="c1">//         mdoc.internal.markdown.Markdown$.toMarkdown(Markdown.scala:118),</span>
-<span class="c1">//         mdoc.internal.cli.MainOps.handleMarkdown(MainOps.scala:62),</span>
-<span class="c1">//         mdoc.internal.cli.MainOps.handleFile(MainOps.scala:90),</span>
-<span class="c1">//         mdoc.internal.cli.MainOps.$anonfun$generateCompleteSite$1(MainOps.scala:130),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.build(DocumentBuilder.scala:88),</span>
+<span class="c1">//         mdoc.internal.markdown.MarkdownBuilder$.buildDocument(MarkdownBuilder.scala:44),</span>
+<span class="c1">//         mdoc.internal.markdown.Processor.processScalaInputs(Processor.scala:185),</span>
+<span class="c1">//         mdoc.internal.markdown.Processor.processScalaInputs(Processor.scala:152),</span>
+<span class="c1">//         mdoc.internal.markdown.Processor.processDocument(Processor.scala:52),</span>
+<span class="c1">//         mdoc.internal.markdown.Markdown$.toMarkdown(Markdown.scala:131),</span>
+<span class="c1">//         mdoc.internal.cli.MainOps.handleMarkdown(MainOps.scala:82),</span>
+<span class="c1">//         mdoc.internal.cli.MainOps.handleFile(MainOps.scala:110),</span>
+<span class="c1">//         mdoc.internal.cli.MainOps.$anonfun$generateCompleteSite$1(MainOps.scala:156),</span>
 <span class="c1">//         scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:168),</span>
 <span class="c1">//         scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:164),</span>
 <span class="c1">//         scala.collection.immutable.List.foldLeft(List.scala:79),</span>
-<span class="c1">//         mdoc.internal.cli.MainOps.generateCompleteSite(MainOps.scala:128),</span>
-<span class="c1">//         mdoc.internal.cli.MainOps.run(MainOps.scala:149),</span>
-<span class="c1">//         mdoc.internal.cli.MainOps$.process(MainOps.scala:233),</span>
+<span class="c1">//         mdoc.internal.cli.MainOps.generateCompleteSite(MainOps.scala:155),</span>
+<span class="c1">//         mdoc.internal.cli.MainOps.run(MainOps.scala:177),</span>
+<span class="c1">//         mdoc.internal.cli.MainOps$.process(MainOps.scala:269),</span>
 <span class="c1">//         mdoc.Main$.process(Main.scala:26),</span>
 <span class="c1">//         mdoc.Main$.process(Main.scala:21),</span>
 <span class="c1">//         mdoc.Main$.main(Main.scala:16),</span>
-<span class="c1">//         mdoc.Main.main(Main.scala),</span>
-<span class="c1">//         java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native M...</span>
+<span class="c1">// ...</span>
 </code></pre></div></div>
 
 <p>upsert</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal"</span><span class="o">)</span>
 <span class="c1">// res4: monix.eval.Task[Value[String]] = FlatMap(</span>
-<span class="c1">//   Async(</span>
-<span class="c1">//     &lt;function2&gt;,</span>
-<span class="c1">//     false,</span>
-<span class="c1">//     false,</span>
-<span class="c1">//     true,</span>
-<span class="c1">//     StackTrace(</span>
-<span class="c1">//       List(</span>
+<span class="c1">//   source = Async(</span>
+<span class="c1">//     register = &lt;function2&gt;,</span>
+<span class="c1">//     trampolineBefore = false,</span>
+<span class="c1">//     trampolineAfter = false,</span>
+<span class="c1">//     restoreLocals = true,</span>
+<span class="c1">//     trace = StackTrace(</span>
+<span class="c1">//       stackTrace = List(</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildFrame(TaskTracing.scala:52),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildCachedFrame(TaskTracing.scala:43),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.cached(TaskTracing.scala:38),</span>
@@ -179,25 +179,25 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <span class="c1">//         monix.eval.internal.TaskRunLoop$.startFuture(TaskRunLoop.scala:605),</span>
 <span class="c1">//         monix.eval.Task.runToFutureOpt(Task.scala:587),</span>
 <span class="c1">//         monix.eval.Task.runToFuture(Task.scala:543),</span>
-<span class="c1">//         repl.Session$App.&lt;init&gt;(graph-guide.md:26),</span>
-<span class="c1">//         repl.Session$.app(graph-guide.md:3),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:82),</span>
+<span class="c1">//         repl.MdocSession$App.&lt;init&gt;(graph-guide.md:26),</span>
+<span class="c1">//         repl.MdocSession$.app(graph-guide.md:3),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//         scala.Console$.withErr(Console.scala:193),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:82),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">// ...</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal"</span><span class="o">)</span> <span class="c1">//should be equal because values are deduplicated</span>
 <span class="c1">// res5: monix.eval.Task[Value[String]] = FlatMap(</span>
-<span class="c1">//   Async(</span>
-<span class="c1">//     &lt;function2&gt;,</span>
-<span class="c1">//     false,</span>
-<span class="c1">//     false,</span>
-<span class="c1">//     true,</span>
-<span class="c1">//     StackTrace(</span>
-<span class="c1">//       List(</span>
+<span class="c1">//   source = Async(</span>
+<span class="c1">//     register = &lt;function2&gt;,</span>
+<span class="c1">//     trampolineBefore = false,</span>
+<span class="c1">//     trampolineAfter = false,</span>
+<span class="c1">//     restoreLocals = true,</span>
+<span class="c1">//     trace = StackTrace(</span>
+<span class="c1">//       stackTrace = List(</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildFrame(TaskTracing.scala:52),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildCachedFrame(TaskTracing.scala:43),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.cached(TaskTracing.scala:38),</span>
@@ -225,25 +225,25 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <span class="c1">//         monix.eval.internal.TaskRunLoop$.startFuture(TaskRunLoop.scala:605),</span>
 <span class="c1">//         monix.eval.Task.runToFutureOpt(Task.scala:587),</span>
 <span class="c1">//         monix.eval.Task.runToFuture(Task.scala:543),</span>
-<span class="c1">//         repl.Session$App.&lt;init&gt;(graph-guide.md:26),</span>
-<span class="c1">//         repl.Session$.app(graph-guide.md:3),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:82),</span>
+<span class="c1">//         repl.MdocSession$App.&lt;init&gt;(graph-guide.md:26),</span>
+<span class="c1">//         repl.MdocSession$.app(graph-guide.md:3),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//         scala.Console$.withErr(Console.scala:193),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:82),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">// ... //should be equal because values are deduplicated</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">create</span><span class="o">(</span><span class="s">"some-literal2"</span><span class="o">)</span> <span class="c1">//new value, hence new id</span>
 <span class="c1">// res6: monix.eval.Task[Value[String]] = FlatMap(</span>
-<span class="c1">//   Async(</span>
-<span class="c1">//     &lt;function2&gt;,</span>
-<span class="c1">//     false,</span>
-<span class="c1">//     false,</span>
-<span class="c1">//     true,</span>
-<span class="c1">//     StackTrace(</span>
-<span class="c1">//       List(</span>
+<span class="c1">//   source = Async(</span>
+<span class="c1">//     register = &lt;function2&gt;,</span>
+<span class="c1">//     trampolineBefore = false,</span>
+<span class="c1">//     trampolineAfter = false,</span>
+<span class="c1">//     restoreLocals = true,</span>
+<span class="c1">//     trace = StackTrace(</span>
+<span class="c1">//       stackTrace = List(</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildFrame(TaskTracing.scala:52),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.buildCachedFrame(TaskTracing.scala:43),</span>
 <span class="c1">//         monix.eval.internal.TaskTracing$.cached(TaskTracing.scala:38),</span>
@@ -271,13 +271,13 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <span class="c1">//         monix.eval.internal.TaskRunLoop$.startFuture(TaskRunLoop.scala:605),</span>
 <span class="c1">//         monix.eval.Task.runToFutureOpt(Task.scala:587),</span>
 <span class="c1">//         monix.eval.Task.runToFuture(Task.scala:543),</span>
-<span class="c1">//         repl.Session$App.&lt;init&gt;(graph-guide.md:26),</span>
-<span class="c1">//         repl.Session$.app(graph-guide.md:3),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:82),</span>
+<span class="c1">//         repl.MdocSession$App.&lt;init&gt;(graph-guide.md:26),</span>
+<span class="c1">//         repl.MdocSession$.app(graph-guide.md:3),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//         scala.Console$.withErr(Console.scala:193),</span>
-<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:82),</span>
+<span class="c1">//         mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:89),</span>
 <span class="c1">//         scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//         scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">// ...</span>
@@ -285,46 +285,49 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <p>count:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">resources</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res7: monix.eval.Task[Long] = Map(</span>
-<span class="c1">//   Async(&lt;function2&gt;, true, true, true, null),</span>
-<span class="c1">//   lspace.structure.Resources$$Lambda$11100/0x0000000803412840@1fe46157,</span>
-<span class="c1">//   StackTrace(</span>
-<span class="c1">//     List(</span>
+<span class="c1">//   source = Async(</span>
+<span class="c1">//     register = &lt;function2&gt;,</span>
+<span class="c1">//     trampolineBefore = true,</span>
+<span class="c1">//     trampolineAfter = true,</span>
+<span class="c1">//     restoreLocals = true,</span>
+<span class="c1">//     trace = null</span>
+<span class="c1">//   ),</span>
+<span class="c1">//   f = lspace.structure.Resources$$Lambda$11351/0x000000080352c040@44b0abd,</span>
+<span class="c1">//   trace = StackTrace(</span>
+<span class="c1">//     stackTrace = List(</span>
 <span class="c1">//       monix.eval.internal.TaskTracing$.buildFrame(TaskTracing.scala:52),</span>
 <span class="c1">//       monix.eval.internal.TaskTracing$.buildCachedFrame(TaskTracing.scala:43),</span>
 <span class="c1">//       monix.eval.internal.TaskTracing$.cached(TaskTracing.scala:38),</span>
 <span class="c1">//       monix.eval.Task.map(Task.scala:2027),</span>
 <span class="c1">//       lspace.structure.Resources.count(Resources.scala:13),</span>
-<span class="c1">//       repl.Session$App.&lt;init&gt;(graph-guide.md:59),</span>
-<span class="c1">//       repl.Session$.app(graph-guide.md:3),</span>
-<span class="c1">//       mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:82),</span>
+<span class="c1">//       repl.MdocSession$App.&lt;init&gt;(graph-guide.md:59),</span>
+<span class="c1">//       repl.MdocSession$.app(graph-guide.md:3),</span>
+<span class="c1">//       mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$2(DocumentBuilder.scala:89),</span>
 <span class="c1">//       scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//       scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//       scala.Console$.withErr(Console.scala:193),</span>
-<span class="c1">//       mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:82),</span>
+<span class="c1">//       mdoc.internal.document.DocumentBuilder$$doc$.$anonfun$build$1(DocumentBuilder.scala:89),</span>
 <span class="c1">//       scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18),</span>
 <span class="c1">//       scala.util.DynamicVariable.withValue(DynamicVariable.scala:59),</span>
 <span class="c1">//       scala.Console$.withOut(Console.scala:164),</span>
-<span class="c1">//       mdoc.internal.document.DocumentBuilder$$doc$.build(DocumentBuilder.scala:81),</span>
-<span class="c1">//       mdoc.internal.markdown.MarkdownCompiler$.buildDocument(MarkdownCompiler.scala:53),</span>
-<span class="c1">//       mdoc.internal.markdown.Processor.processScalaInputs(Processor.scala:133),</span>
-<span class="c1">//       mdoc.internal.markdown.Processor.processDocument(Processor.scala:48),</span>
-<span class="c1">//       mdoc.internal.markdown.Markdown$.toMarkdown(Markdown.scala:118),</span>
-<span class="c1">//       mdoc.internal.cli.MainOps.handleMarkdown(MainOps.scala:62),</span>
-<span class="c1">//       mdoc.internal.cli.MainOps.handleFile(MainOps.scala:90),</span>
-<span class="c1">//       mdoc.internal.cli.MainOps.$anonfun$generateCompleteSite$1(MainOps.scala:130),</span>
+<span class="c1">//       mdoc.internal.document.DocumentBuilder$$doc$.build(DocumentBuilder.scala:88),</span>
+<span class="c1">//       mdoc.internal.markdown.MarkdownBuilder$.buildDocument(MarkdownBuilder.scala:44),</span>
+<span class="c1">//       mdoc.internal.markdown.Processor.processScalaInputs(Processor.scala:185),</span>
+<span class="c1">//       mdoc.internal.markdown.Processor.processScalaInputs(Processor.scala:152),</span>
+<span class="c1">//       mdoc.internal.markdown.Processor.processDocument(Processor.scala:52),</span>
+<span class="c1">//       mdoc.internal.markdown.Markdown$.toMarkdown(Markdown.scala:131),</span>
+<span class="c1">//       mdoc.internal.cli.MainOps.handleMarkdown(MainOps.scala:82),</span>
+<span class="c1">//       mdoc.internal.cli.MainOps.handleFile(MainOps.scala:110),</span>
+<span class="c1">//       mdoc.internal.cli.MainOps.$anonfun$generateCompleteSite$1(MainOps.scala:156),</span>
 <span class="c1">//       scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:168),</span>
 <span class="c1">//       scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:164),</span>
 <span class="c1">//       scala.collection.immutable.List.foldLeft(List.scala:79),</span>
-<span class="c1">//       mdoc.internal.cli.MainOps.generateCompleteSite(MainOps.scala:128),</span>
-<span class="c1">//       mdoc.internal.cli.MainOps.run(MainOps.scala:149),</span>
-<span class="c1">//       mdoc.internal.cli.MainOps$.process(MainOps.scala:233),</span>
+<span class="c1">//       mdoc.internal.cli.MainOps.generateCompleteSite(MainOps.scala:155),</span>
+<span class="c1">//       mdoc.internal.cli.MainOps.run(MainOps.scala:177),</span>
+<span class="c1">//       mdoc.internal.cli.MainOps$.process(MainOps.scala:269),</span>
 <span class="c1">//       mdoc.Main$.process(Main.scala:26),</span>
 <span class="c1">//       mdoc.Main$.process(Main.scala:21),</span>
 <span class="c1">//       mdoc.Main$.main(Main.scala:16),</span>
-<span class="c1">//       mdoc.Main.main(Main.scala),</span>
-<span class="c1">//       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method),</span>
-<span class="c1">//       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62),</span>
-<span class="c1">//       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43),</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
 
@@ -336,22 +339,22 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 
 <p>Retrieved by Iri(s)/Uri(s):</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">)</span>
-<span class="c1">// res8: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@3a14aae6</span>
+<span class="c1">// res8: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@17a1316c</span>
 <span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasIri</span><span class="o">(</span><span class="s">"graph-doc/place/123"</span><span class="o">,</span> <span class="s">"graph-doc/person/123"</span><span class="o">)</span>
-<span class="c1">// res9: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@36d8cca9</span>
+<span class="c1">// res9: monix.reactive.Observable[Node] = monix.reactive.internal.operators.ConcatMapObservable@78d6df86</span>
 </code></pre></div></div>
 
 <p>Retrieved by Id(s):</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">hasId</span><span class="o">(</span><span class="mi">1002L</span><span class="o">)</span>
 <span class="c1">// res10: monix.eval.Task[Option[Node]] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$11045/0x00000008033e8040@7e8b16c3</span>
+<span class="c1">//   thunk = lspace.provider.mem.store.MemStore$$Lambda$11324/0x0000000803512040@1ceb4ae1</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">nodes</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res11: monix.eval.Task[Long] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$11091/0x000000080340f040@28c88690</span>
+<span class="c1">//   thunk = lspace.provider.mem.store.MemStore$$Lambda$11347/0x0000000803528840@76c27cf9</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
@@ -364,7 +367,7 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">edges</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res12: monix.eval.Task[Long] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$11091/0x000000080340f040@518f5c59</span>
+<span class="c1">//   thunk = lspace.provider.mem.store.MemStore$$Lambda$11347/0x0000000803528840@29a2e2f4</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 
@@ -376,7 +379,7 @@ There are API’s on each structure-level (resource, value, edge and node).</p>
 <p>Counted:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">graph</span><span class="o">.</span><span class="py">values</span><span class="o">.</span><span class="py">count</span><span class="o">()</span>
 <span class="c1">// res13: monix.eval.Task[Long] = Eval(</span>
-<span class="c1">//   lspace.provider.mem.store.MemStore$$Lambda$11091/0x000000080340f040@267aec7</span>
+<span class="c1">//   thunk = lspace.provider.mem.store.MemStore$$Lambda$11347/0x0000000803528840@6223ad40</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 

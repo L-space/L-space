@@ -167,14 +167,14 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="k">import</span> <span class="nn">scala.concurrent.duration._</span>
 <span class="nv">scala</span><span class="o">.</span><span class="py">concurrent</span><span class="o">.</span><span class="py">Await</span><span class="o">.</span><span class="py">ready</span><span class="o">(</span><span class="nv">lspace</span><span class="o">.</span><span class="py">util</span><span class="o">.</span><span class="py">SampleGraph</span><span class="o">.</span><span class="py">loadSocial</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">runToFuture</span><span class="o">,</span> <span class="mf">5.</span><span class="n">seconds</span><span class="o">)</span>
 <span class="c1">// res0: monix.execution.CancelableFuture[{val places: AnyRef{val SanJosédeMaipo: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val CrystalSprings: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Haridwar: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}; val Talca: AnyRef{val place: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val geo: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultGeopoint.C]}};val persons: AnyRef{val Yoshio: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Levi: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Gray: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Kevin: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultDouble.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Stan: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val balance: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val rate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultInt.C]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}; val Garrison: AnyRef{val person: lspace.structure.Node; val id: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val name: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultString.C]; val birthdate: lspace.structure.Edge[lspace.structure.Node,lspace.structure.util.ClassTypeable.defaultLocalDate.C]; val birthPlace: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]; val address: lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]}};val knows: AnyRef{val GarrissonKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GarrissonKnownKevin: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownStan: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val KevinKnownGray: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val GrayKnowsLevi: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node]); val LeviKnowsYoshio: (lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node], lspace.structure.Edge[lspace.structure.Node,lspace.structure.Node])}}] = Async(</span>
-<span class="c1">//   Future(Success(lspace.util.SampleGraph$$anon$15@2eb1fd48)),</span>
-<span class="c1">//   monix.eval.internal.TaskConnection$Impl$$anon$1@21a7f93e,</span>
-<span class="c1">//   null</span>
+<span class="c1">//   underlying = Future(Success(lspace.util.SampleGraph$$anon$15@2e6b5b5e)),</span>
+<span class="c1">//   cancelable = monix.eval.internal.TaskConnection$Impl$$anon$1@48933671,</span>
+<span class="c1">//   isolatedCtx = null</span>
 <span class="c1">// )</span>
 <span class="k">val</span> <span class="nv">labels</span> <span class="k">=</span> <span class="nv">SampleGraph</span><span class="o">.</span><span class="py">ontologies</span>
-<span class="c1">// labels: SampleGraph.ontologies.type = lspace.util.SampleGraph$ontologies$@2446fdbc</span>
+<span class="c1">// labels: SampleGraph.ontologies.type = lspace.util.SampleGraph$ontologies$@16c845a7</span>
 <span class="k">val</span> <span class="nv">keys</span> <span class="k">=</span> <span class="nv">SampleGraph</span><span class="o">.</span><span class="py">properties</span>
-<span class="c1">// keys: SampleGraph.properties.type = lspace.util.SampleGraph$properties$@4565079</span>
+<span class="c1">// keys: SampleGraph.properties.type = lspace.util.SampleGraph$properties$@4f613e75</span>
 </code></pre></div></div>
 <h4 id="n">N</h4>
 <p>N-step is a node selection step</p>
@@ -191,21 +191,21 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Has-step validates the presence of a property and optionally asserts it by one or more predicates</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//filters on nodes which have an edge with property "name"</span>
 <span class="c1">// res1: List[Any] = List(</span>
-<span class="c1">//   "Garrison",</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Stan",</span>
 <span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Garrison",</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   "Talca",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Levi",</span>
-<span class="c1">//   "Talca",</span>
-<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   "Gray"</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo"</span>
 <span class="c1">// ) //filters on nodes which have an edge with property "name"</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">eqv</span><span class="o">(</span><span class="s">"Garrison"</span><span class="o">)).</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//adds an equality constraint with value "Alice"</span>
 <span class="c1">// res2: List[Any] = List("Garrison") //adds an equality constraint with value "Alice"</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">birthDate</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gt</span><span class="o">(</span><span class="nv">LocalDate</span><span class="o">.</span><span class="py">parse</span><span class="o">(</span><span class="s">"2002-06-13"</span><span class="o">))).</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
-<span class="c1">// res3: List[Long] = List(1233L, 1174L)</span>
+<span class="c1">// res3: List[Long] = List(1268L, 1206L)</span>
 </code></pre></div></div>
 <h5 id="hasnot">HasNot</h5>
 <p>HasNot-step is the inverse of a Has-step (this could also be written as <code class="language-plaintext highlighter-rouge">.not(_.has(..))</code>)</p>
@@ -213,19 +213,19 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>HasLabel-step validates the precence of one or more labels (ontology, property or datatype)</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">hasLabel</span><span class="o">(</span><span class="nv">labels</span><span class="o">.</span><span class="py">person</span><span class="o">).</span><span class="py">out</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">name</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//filters all persons</span>
 <span class="c1">// res4: List[Any] = List(</span>
+<span class="c1">//   "Stan",</span>
 <span class="c1">//   "Garrison",</span>
+<span class="c1">//   "Gray",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Levi",</span>
-<span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   "Gray"</span>
+<span class="c1">//   "Yoshio"</span>
 <span class="c1">// ) //filters all persons</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">hasLabel</span><span class="o">(</span><span class="nv">labels</span><span class="o">.</span><span class="py">place</span><span class="o">).</span><span class="py">out</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">name</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//filters all places</span>
 <span class="c1">// res5: List[Any] = List(</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
 <span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   "Crystal Springs"</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h5 id="hasid">HasId</h5>
@@ -251,53 +251,53 @@ depending on the nature of the traversal, guide and the result-type the user can
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">count</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//total nodes to draw from</span>
 <span class="c1">// res10: Long = 11L //total nodes to draw from</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">coin</span><span class="o">(</span><span class="mf">0.2</span><span class="o">).</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//random selection of nodes with p = 0.2 (20%)</span>
-<span class="c1">// res11: List[Long] = List(1001L, 1066L, 1264L) //random selection of nodes with p = 0.2 (20%)</span>
+<span class="c1">// res11: List[Long] = List(1304L, 1017L) //random selection of nodes with p = 0.2 (20%)</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">coin</span><span class="o">(</span><span class="mf">0.8</span><span class="o">).</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//random selection of nodes with p = 0.8 (80%)</span>
 <span class="c1">// res12: List[Long] = List(</span>
-<span class="c1">//   1282L,</span>
-<span class="c1">//   1030L,</span>
-<span class="c1">//   1233L,</span>
-<span class="c1">//   1174L,</span>
-<span class="c1">//   1122L,</span>
+<span class="c1">//   1286L,</span>
+<span class="c1">//   1095L,</span>
+<span class="c1">//   1304L,</span>
+<span class="c1">//   1054L,</span>
+<span class="c1">//   1247L,</span>
 <span class="c1">//   1001L,</span>
-<span class="c1">//   1066L,</span>
-<span class="c1">//   1134L,</span>
-<span class="c1">//   1264L,</span>
-<span class="c1">//   1210L</span>
+<span class="c1">//   1268L,</span>
+<span class="c1">//   1206L,</span>
+<span class="c1">//   1144L,</span>
+<span class="c1">//   1017L</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="where">Where</h4>
 <p>Where-step takes a traversal and filters on non-empty results</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">where</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">)).</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res13: List[Any] = List(</span>
-<span class="c1">//   "Garrison",</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Stan",</span>
 <span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Garrison",</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   "Talca",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Levi",</span>
-<span class="c1">//   "Talca",</span>
-<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   "Gray"</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="and">And</h4>
 <p>And-step takes one or more traversals and filters only those which have non-empty results for all traversals</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">and</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">),</span> <span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"https://example.org/birthDate"</span><span class="o">)).</span><span class="py">out</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">name</span><span class="o">,</span> <span class="nv">keys</span><span class="o">.</span><span class="py">birthDate</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res14: List[Any] = List(</span>
+<span class="c1">//   "Stan",</span>
+<span class="c1">//   2002-06-13,</span>
 <span class="c1">//   "Garrison",</span>
 <span class="c1">//   1994-06-18,</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   1997-04-10,</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   2008-11-30,</span>
 <span class="c1">//   "Levi",</span>
 <span class="c1">//   2008-12-20,</span>
 <span class="c1">//   1996-08-18,</span>
-<span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   2002-06-13,</span>
-<span class="c1">//   "Gray",</span>
-<span class="c1">//   1997-04-10</span>
+<span class="c1">//   "Yoshio"</span>
 <span class="c1">// )</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">and</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gt</span><span class="o">(</span><span class="mi">300</span><span class="o">)),</span> <span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">lt</span><span class="o">(</span><span class="mi">3000</span><span class="o">))).</span><span class="py">count</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//shouldBe 2</span>
 <span class="c1">// res15: Long = 2L</span>
@@ -306,22 +306,22 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Or-step takes one or more traversals and filters only those which have non-empty results for at least one traversal</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">or</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">),</span> <span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"https://example.org/birthDate"</span><span class="o">)).</span><span class="py">out</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">name</span><span class="o">,</span> <span class="nv">keys</span><span class="o">.</span><span class="py">birthDate</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res16: List[Any] = List(</span>
+<span class="c1">//   "Stan",</span>
+<span class="c1">//   2002-06-13,</span>
+<span class="c1">//   "Haridwar",</span>
 <span class="c1">//   "Garrison",</span>
 <span class="c1">//   1994-06-18,</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
-<span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   1997-04-10,</span>
+<span class="c1">//   "Talca",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   2008-11-30,</span>
 <span class="c1">//   "Levi",</span>
 <span class="c1">//   2008-12-20,</span>
-<span class="c1">//   "Talca",</span>
-<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   1996-08-18,</span>
 <span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   2002-06-13,</span>
-<span class="c1">//   "Gray",</span>
-<span class="c1">//   1997-04-10</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="not">Not</h4>
@@ -340,29 +340,29 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Range-step filters by a low-end and high-end index</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">range</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">16</span><span class="o">).</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//takes only node 4 until 16</span>
 <span class="c1">// res19: List[String] = List(</span>
+<span class="c1">//   "librarian-doc/place/12345",</span>
+<span class="c1">//   "librarian-doc/person/345",</span>
+<span class="c1">//   "librarian-doc/place/34567",</span>
 <span class="c1">//   "librarian-doc/person/34567",</span>
 <span class="c1">//   "librarian-doc/person/12345",</span>
-<span class="c1">//   "librarian-doc/place/34567",</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
 <span class="c1">//   "librarian-doc/person/123",</span>
-<span class="c1">//   "librarian-doc/person/567",</span>
-<span class="c1">//   "librarian-doc/person/345"</span>
+<span class="c1">//   "librarian-doc/place/123"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="limit">Limit</h4>
 <p>Limit-step takes the first x-number of traversers</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">limit</span><span class="o">(</span><span class="mi">12</span><span class="o">).</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//takes only the first 12 nodes</span>
 <span class="c1">// res20: List[String] = List(</span>
-<span class="c1">//   "librarian-doc/person/56789",</span>
-<span class="c1">//   "librarian-doc/place/123",</span>
+<span class="c1">//   "librarian-doc/person/567",</span>
 <span class="c1">//   "librarian-doc/place/345",</span>
+<span class="c1">//   "librarian-doc/person/56789",</span>
+<span class="c1">//   "librarian-doc/place/12345",</span>
+<span class="c1">//   "librarian-doc/person/345",</span>
+<span class="c1">//   "librarian-doc/place/34567",</span>
 <span class="c1">//   "librarian-doc/person/34567",</span>
 <span class="c1">//   "librarian-doc/person/12345",</span>
-<span class="c1">//   "librarian-doc/place/34567",</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
 <span class="c1">//   "librarian-doc/person/123",</span>
-<span class="c1">//   "librarian-doc/person/567",</span>
-<span class="c1">//   "librarian-doc/person/345"</span>
+<span class="c1">//   "librarian-doc/place/123"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="skip">Skip</h4>
@@ -374,16 +374,16 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Tail-step takes the last x-number of traversers</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">tail</span><span class="o">(</span><span class="mi">12</span><span class="o">).</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//takes only the last 12 nodes</span>
 <span class="c1">// res22: List[String] = List(</span>
-<span class="c1">//   "librarian-doc/person/56789",</span>
-<span class="c1">//   "librarian-doc/place/123",</span>
+<span class="c1">//   "librarian-doc/person/567",</span>
 <span class="c1">//   "librarian-doc/place/345",</span>
+<span class="c1">//   "librarian-doc/person/56789",</span>
+<span class="c1">//   "librarian-doc/place/12345",</span>
+<span class="c1">//   "librarian-doc/person/345",</span>
+<span class="c1">//   "librarian-doc/place/34567",</span>
 <span class="c1">//   "librarian-doc/person/34567",</span>
 <span class="c1">//   "librarian-doc/person/12345",</span>
-<span class="c1">//   "librarian-doc/place/34567",</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
 <span class="c1">//   "librarian-doc/person/123",</span>
-<span class="c1">//   "librarian-doc/person/567",</span>
-<span class="c1">//   "librarian-doc/person/345"</span>
+<span class="c1">//   "librarian-doc/place/123"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h3 id="move-steps">Move steps</h3>
@@ -392,64 +392,64 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Out-step takes one or more property-labels and traverses along the valid outgoing paths if any</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res23: List[Any] = List(</span>
-<span class="c1">//   "Garrison",</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Stan",</span>
 <span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Garrison",</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   "Talca",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Levi",</span>
-<span class="c1">//   "Talca",</span>
-<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   "Gray"</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="oute">OutE</h4>
 <p>OutE-step takes one or more property-labels and traverses to the valid outgoing paths if any</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">outE</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res24: List[Edge[Node, Any]] = List(</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e509,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e41f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e45a,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4d8,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4aa,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e46c,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e43e,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e47b,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4f7,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4c1</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e50d,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e45e,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e51f,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e433,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4ed,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e470,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4fb,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4cb,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e48a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e419</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="in">In</h4>
 <p>In-step takes one or more property-labels and traverses along the valid incoming paths if any</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res25: List[Any] = List(</span>
-<span class="c1">//   "Garrison",</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
+<span class="c1">//   "Stan",</span>
 <span class="c1">//   "Haridwar",</span>
+<span class="c1">//   "Garrison",</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   "Talca",</span>
 <span class="c1">//   "Kevin",</span>
 <span class="c1">//   "Levi",</span>
-<span class="c1">//   "Talca",</span>
-<span class="c1">//   "Crystal Springs",</span>
 <span class="c1">//   "Yoshio",</span>
-<span class="c1">//   "Stan",</span>
-<span class="c1">//   "Gray"</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo"</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="ine">InE</h4>
 <p>InE-step takes one or more property-labels and traverses to the valid incoming paths if any</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">outE</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res26: List[Edge[Node, Any]] = List(</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e509,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e41f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e45a,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4d8,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4aa,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e46c,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e43e,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e47b,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4f7,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4c1</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e50d,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e45e,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e51f,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e433,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4ed,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e470,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4fb,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e4cb,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e48a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e419</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="label">Label</h4>
@@ -458,15 +458,15 @@ depending on the nature of the traversal, guide and the result-type the user can
 <span class="c1">// res27: List[Ontology] = List(</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Place,</span>
-<span class="c1">//   ontology:https://example.org/Place,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
+<span class="c1">//   ontology:https://example.org/Place,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Place,</span>
 <span class="c1">//   ontology:https://example.org/Address,</span>
-<span class="c1">//   ontology:https://example.org/Place,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
 <span class="c1">//   ontology:https://example.org/Person,</span>
-<span class="c1">//   ontology:https://example.org/Person</span>
+<span class="c1">//   ontology:https://example.org/Person,</span>
+<span class="c1">//   ontology:https://example.org/Place</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h3 id="branche-steps">Branche steps</h3>
@@ -475,54 +475,54 @@ depending on the nature of the traversal, guide and the result-type the user can
 <p>Union-step takes one or more traversals and merges the results into a single traversal</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">union</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">out</span><span class="o">(),</span> <span class="nv">_</span><span class="o">.</span><span class="py">in</span><span class="o">()).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//all incoming and outgoing edges</span>
 <span class="c1">// res28: List[Any] = List(</span>
+<span class="c1">//   2002-06-13,</span>
+<span class="c1">//   300,</span>
+<span class="c1">//   4,</span>
+<span class="c1">//   "librarian-doc/person/567",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   "Stan",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3fc,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   "librarian-doc/place/345",</span>
+<span class="c1">//   Point(x = 89.45136, y = 88.01204),</span>
+<span class="c1">//   "Haridwar",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e2,</span>
 <span class="c1">//   1994-06-18,</span>
 <span class="c1">//   "librarian-doc/person/56789",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
 <span class="c1">//   "Garrison",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e465,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   "librarian-doc/place/123",</span>
-<span class="c1">//   Point(72.0403, 60.90879),</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   "librarian-doc/place/345",</span>
-<span class="c1">//   Point(89.45136, 88.01204),</span>
-<span class="c1">//   "Haridwar",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   2008-11-30,</span>
-<span class="c1">//   500.5,</span>
-<span class="c1">//   2,</span>
-<span class="c1">//   "librarian-doc/person/34567",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e46a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   "librarian-doc/place/12345",</span>
+<span class="c1">//   Point(x = -48.4046, y = 175.87173),</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   1997-04-10,</span>
+<span class="c1">//   2230.3,</span>
+<span class="c1">//   1,</span>
+<span class="c1">//   "librarian-doc/person/345",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   "Kevin",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e409,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   2008-12-20,</span>
-<span class="c1">//   -245.05,</span>
-<span class="c1">//   2,</span>
-<span class="c1">//   "librarian-doc/person/12345",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   "Levi",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e42d,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   "Gray",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
 <span class="c1">//   "librarian-doc/place/34567",</span>
-<span class="c1">//   Point(74.32746, -45.06438),</span>
+<span class="c1">//   Point(x = 74.32746, y = -45.06438),</span>
 <span class="c1">//   "Talca",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
 <span class="c1">//   "888",</span>
 <span class="c1">//   "apples",</span>
+<span class="c1">//   1,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
 <span class="c1">// ... //all incoming and outgoing edges</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">union</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gt</span><span class="o">(</span><span class="mi">300</span><span class="o">)),</span> <span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">lt</span><span class="o">(-</span><span class="mi">200</span><span class="o">))).</span><span class="py">count</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//should be 3</span>
 <span class="c1">// res29: Long = 3L</span>
@@ -532,17 +532,17 @@ depending on the nature of the traversal, guide and the result-type the user can
 upto the traverser at the root the local-traversal</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">local</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">out</span><span class="o">().</span><span class="py">hasLabel</span><span class="o">[</span><span class="kt">Int</span><span class="o">].</span><span class="py">sum</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//sums all outgoing edges to integers for each node in the graph</span>
 <span class="c1">// res30: List[Double] = List(</span>
+<span class="c1">//   304.0,</span>
 <span class="c1">//   0.0,</span>
 <span class="c1">//   0.0,</span>
-<span class="c1">//   0.0,</span>
-<span class="c1">//   2.0,</span>
-<span class="c1">//   2.0,</span>
 <span class="c1">//   0.0,</span>
 <span class="c1">//   1.0,</span>
 <span class="c1">//   0.0,</span>
+<span class="c1">//   1.0,</span>
+<span class="c1">//   2.0,</span>
+<span class="c1">//   2.0,</span>
 <span class="c1">//   4.0,</span>
-<span class="c1">//   304.0,</span>
-<span class="c1">//   1.0</span>
+<span class="c1">//   0.0</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="repeat">Repeat</h4>
@@ -568,21 +568,21 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <h4 id="coalesce">Coalesce</h4>
 <p>Coalesce-step takes one or more traversals and returns the result of the first non-empty traversal</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">coalesce</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">rate</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gte</span><span class="o">(</span><span class="mi">4</span><span class="o">)).</span><span class="py">iri</span><span class="o">,</span> <span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">balance</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">lt</span><span class="o">(-</span><span class="mi">200</span><span class="o">)).</span><span class="py">iri</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span>
-<span class="c1">// res38: String = "librarian-doc/person/12345"</span>
+<span class="c1">// res38: String = "librarian-doc/person/567"</span>
 </code></pre></div></div>
 <h4 id="choose">Choose</h4>
 <p>Choose-step takes a right or left traversal, right if the by-traversal is non-empty, left if it is empty.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">choose</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="nv">keys</span><span class="o">.</span><span class="py">rate</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">gte</span><span class="o">(</span><span class="mi">4</span><span class="o">)),</span> <span class="nv">_</span><span class="o">.</span><span class="py">constant</span><span class="o">(</span><span class="kc">true</span><span class="o">),</span> <span class="nv">_</span><span class="o">.</span><span class="py">constant</span><span class="o">(</span><span class="kc">false</span><span class="o">)).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> 
 <span class="c1">// res39: List[Boolean] = List(</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
-<span class="c1">//   false,</span>
 <span class="c1">//   true,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
+<span class="c1">//   false,</span>
 <span class="c1">//   true,</span>
 <span class="c1">//   false</span>
 <span class="c1">// ) </span>
@@ -595,17 +595,17 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <p>Id-step returns the resource-id (long)</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">id</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res41: List[Long] = List(</span>
-<span class="c1">//   1282L,</span>
-<span class="c1">//   1030L,</span>
-<span class="c1">//   1100L,</span>
-<span class="c1">//   1233L,</span>
-<span class="c1">//   1174L,</span>
-<span class="c1">//   1122L,</span>
+<span class="c1">//   1286L,</span>
+<span class="c1">//   1095L,</span>
+<span class="c1">//   1304L,</span>
+<span class="c1">//   1054L,</span>
+<span class="c1">//   1247L,</span>
+<span class="c1">//   1127L,</span>
 <span class="c1">//   1001L,</span>
-<span class="c1">//   1066L,</span>
-<span class="c1">//   1134L,</span>
-<span class="c1">//   1264L,</span>
-<span class="c1">//   1210L</span>
+<span class="c1">//   1268L,</span>
+<span class="c1">//   1206L,</span>
+<span class="c1">//   1144L,</span>
+<span class="c1">//   1017L</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="constant">Constant</h4>
@@ -617,107 +617,107 @@ each intermediary iteration by providing ‘collect = true’.</p>
 <p>From-step …</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">E</span><span class="o">.</span><span class="py">from</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res43: List[Any] = List(</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e409,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e409,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e41f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e409,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e42d,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e42d,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e43e,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e42d,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44f,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3fc,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e419,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3fc,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e421,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e2,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e421,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e2,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$8@5db0e433,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e421,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44a,</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
 <h4 id="to">To</h4>
 <p>To-step …</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">E</span><span class="o">.</span><span class="py">to</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res44: List[Any] = List(</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   1,</span>
-<span class="c1">//   "librarian-doc/person/56789",</span>
-<span class="c1">//   10.34,</span>
-<span class="c1">//   "Garrison",</span>
-<span class="c1">//   1994-06-18,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e465,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   "librarian-doc/place/123",</span>
-<span class="c1">//   4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
-<span class="c1">//   "librarian-doc/person/12345",</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   5L,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   "Levi",</span>
-<span class="c1">//   Point(72.0403, 60.90879),</span>
-<span class="c1">//   2008-12-20,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e42d,</span>
-<span class="c1">//   "librarian-doc/place/12345",</span>
-<span class="c1">//   -245.05,</span>
+<span class="c1">//   500.5,</span>
+<span class="c1">//   "librarian-doc/person/123",</span>
 <span class="c1">//   2,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   "Crystal Springs",</span>
-<span class="c1">//   "librarian-doc/person/345",</span>
-<span class="c1">//   "Gray",</span>
-<span class="c1">//   1997-04-10,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44f,</span>
-<span class="c1">//   4L,</span>
-<span class="c1">//   Point(-48.4046, 175.87173),</span>
-<span class="c1">//   2230.3,</span>
-<span class="c1">//   1,</span>
+<span class="c1">//   "Yoshio",</span>
+<span class="c1">//   "librarian-doc/person/567",</span>
+<span class="c1">//   "Stan",</span>
+<span class="c1">//   1996-08-18,</span>
+<span class="c1">//   2002-06-13,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3fc,</span>
+<span class="c1">//   300,</span>
+<span class="c1">//   4,</span>
+<span class="c1">//   "San Jos\u00e9 de Maipo",</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e421,</span>
+<span class="c1">//   5L,</span>
+<span class="c1">//   "librarian-doc/person/56789",</span>
+<span class="c1">//   "Garrison",</span>
+<span class="c1">//   10.34,</span>
+<span class="c1">//   Point(x = 72.0403, y = 60.90879),</span>
+<span class="c1">//   1994-06-18,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e46a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   "librarian-doc/place/12345",</span>
+<span class="c1">//   4,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e2,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   "Crystal Springs",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e2,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   "librarian-doc/person/12345",</span>
+<span class="c1">//   4L,</span>
+<span class="c1">//   Point(x = -48.4046, y = 175.87173),</span>
+<span class="c1">//   "Levi",</span>
+<span class="c1">//   2008-12-20,</span>
 <span class="c1">//   "librarian-doc/place/345",</span>
-<span class="c1">//   "librarian-doc/person/34567",</span>
-<span class="c1">//   "Kevin",</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e421,</span>
+<span class="c1">//   -245.05,</span>
 <span class="c1">//   "Haridwar",</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
@@ -743,18 +743,18 @@ g.N.outMap(“name”, “knows”) //returns a property-map for edges with labe
 ```scala
 g.N.has("name", P.eqv("Garrison")).outEMap().withGraph(graph).head //should return all out-going edges grouped by key
 // res45: Map[Property, List[Edge[Node, Any]]] = HashMap(
-//   property:name -&gt; List(lspace.provider.mem.MemGraph$$anon$8@5db0e509),
+//   property:name -&gt; List(lspace.provider.mem.MemGraph$$anon$8@5db0e51f),
 //   property:https://example.org/birthPlace -&gt; List(
-//     lspace.provider.mem.MemGraph$$anon$8@5db0e50e
+//     lspace.provider.mem.MemGraph$$anon$8@5db0e522
 //   ),
-//   property:address -&gt; List(lspace.provider.mem.MemGraph$$anon$8@5db0e510),
-//   property:@id -&gt; List(lspace.provider.mem.MemGraph$$anon$8@5db0e507),
+//   property:address -&gt; List(lspace.provider.mem.MemGraph$$anon$8@5db0e523),
+//   property:@id -&gt; List(lspace.provider.mem.MemGraph$$anon$8@5db0e51d),
 //   property:https://example.org/birthDate -&gt; List(
-//     lspace.provider.mem.MemGraph$$anon$8@5db0e50c
+//     lspace.provider.mem.MemGraph$$anon$8@5db0e521
 //   ),
 //   property:https://example.org/knows -&gt; List(
-//     lspace.provider.mem.MemGraph$$anon$8@5db0e511,
-//     lspace.provider.mem.MemGraph$$anon$8@5db0e515
+//     lspace.provider.mem.MemGraph$$anon$8@5db0e524,
+//     lspace.provider.mem.MemGraph$$anon$8@5db0e527
 //   )
 // )
 </code></pre></div></div>
@@ -762,8 +762,8 @@ g.N.has("name", P.eqv("Garrison")).outEMap().withGraph(graph).head //should retu
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">eqv</span><span class="o">(</span><span class="s">"Garrison"</span><span class="o">)).</span><span class="py">inMap</span><span class="o">().</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//returns a property-map on all incoming connected resources</span>
 <span class="c1">// res46: Map[Property, List[Any]] = Map(</span>
 <span class="c1">//   property:https://example.org/knows -&gt; List(</span>
-<span class="c1">//     lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//     lspace.provider.mem.MemGraph$$anon$7@5db0e4f3</span>
+<span class="c1">//     lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//     lspace.provider.mem.MemGraph$$anon$7@5db0e509</span>
 <span class="c1">//   )</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
@@ -771,8 +771,8 @@ g.N.has("name", P.eqv("Garrison")).outEMap().withGraph(graph).head //should retu
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">has</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="nv">P</span><span class="o">.</span><span class="py">eqv</span><span class="o">(</span><span class="s">"Garrison"</span><span class="o">)).</span><span class="py">inEMap</span><span class="o">().</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//should return all in-coming edges grouped by key</span>
 <span class="c1">// res47: Map[Property, List[Edge[Any, Node]]] = Map(</span>
 <span class="c1">//   property:https://example.org/knows -&gt; List(</span>
-<span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e516,</span>
-<span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e513</span>
+<span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e529,</span>
+<span class="c1">//     lspace.provider.mem.MemGraph$$anon$8@5db0e525</span>
 <span class="c1">//   )</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
@@ -825,39 +825,39 @@ g.N.out("balance").hasLabel(`@double`).mean.withGraph(graph).head //should be 62
 <h4 id="head">Head</h4>
 <p>Head-step takes the first traverser</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">head</span><span class="o">.</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//takes only the first node</span>
-<span class="c1">// res54: String = "librarian-doc/person/56789" //takes only the first node</span>
+<span class="c1">// res54: String = "librarian-doc/person/567" //takes only the first node</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">group</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">head</span><span class="o">).</span><span class="py">mapValues</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">iri</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//</span>
 <span class="c1">// res55: List[(Option[Any], List[String])] = List(</span>
-<span class="c1">//   (Some("Haridwar"), List("librarian-doc/place/345")),</span>
-<span class="c1">//   (Some("Garrison"), List("librarian-doc/person/56789")),</span>
-<span class="c1">//   (Some("Gray"), List("librarian-doc/person/345")),</span>
-<span class="c1">//   (Some("Crystal Springs"), List("librarian-doc/place/12345")),</span>
+<span class="c1">//   (Some(value = "Haridwar"), List("librarian-doc/place/345")),</span>
+<span class="c1">//   (Some(value = "Garrison"), List("librarian-doc/person/56789")),</span>
+<span class="c1">//   (Some(value = "Gray"), List("librarian-doc/person/345")),</span>
+<span class="c1">//   (Some(value = "Crystal Springs"), List("librarian-doc/place/12345")),</span>
 <span class="c1">//   (None, List()),</span>
-<span class="c1">//   (Some("Levi"), List("librarian-doc/person/12345")),</span>
-<span class="c1">//   (Some("Yoshio"), List("librarian-doc/person/123")),</span>
-<span class="c1">//   (Some("San Jos\u00e9 de Maipo"), List("librarian-doc/place/123")),</span>
-<span class="c1">//   (Some("Kevin"), List("librarian-doc/person/34567")),</span>
-<span class="c1">//   (Some("Talca"), List("librarian-doc/place/34567")),</span>
-<span class="c1">//   (Some("Stan"), List("librarian-doc/person/567"))</span>
+<span class="c1">//   (Some(value = "Levi"), List("librarian-doc/person/12345")),</span>
+<span class="c1">//   (Some(value = "Yoshio"), List("librarian-doc/person/123")),</span>
+<span class="c1">//   (Some(value = "San Jos\u00e9 de Maipo"), List("librarian-doc/place/123")),</span>
+<span class="c1">//   (Some(value = "Kevin"), List("librarian-doc/person/34567")),</span>
+<span class="c1">//   (Some(value = "Talca"), List("librarian-doc/place/34567")),</span>
+<span class="c1">//   (Some(value = "Stan"), List("librarian-doc/person/567"))</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="last">Last</h4>
 <p>Last-step takes the last traverser</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">last</span><span class="o">.</span><span class="py">iri</span><span class="o">.</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">head</span> <span class="c1">//takes only the last 12 nodes</span>
-<span class="c1">// res56: String = "librarian-doc/person/345" //takes only the last 12 nodes</span>
+<span class="c1">// res56: String = "librarian-doc/place/123" //takes only the last 12 nodes</span>
 <span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">group</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">out</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="py">last</span><span class="o">).</span><span class="py">mapValues</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">iri</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span> <span class="c1">//</span>
 <span class="c1">// res57: List[(Option[Any], List[String])] = List(</span>
-<span class="c1">//   (Some("Haridwar"), List("librarian-doc/place/345")),</span>
-<span class="c1">//   (Some("Garrison"), List("librarian-doc/person/56789")),</span>
-<span class="c1">//   (Some("Gray"), List("librarian-doc/person/345")),</span>
-<span class="c1">//   (Some("Crystal Springs"), List("librarian-doc/place/12345")),</span>
+<span class="c1">//   (Some(value = "Haridwar"), List("librarian-doc/place/345")),</span>
+<span class="c1">//   (Some(value = "Garrison"), List("librarian-doc/person/56789")),</span>
+<span class="c1">//   (Some(value = "Gray"), List("librarian-doc/person/345")),</span>
+<span class="c1">//   (Some(value = "Crystal Springs"), List("librarian-doc/place/12345")),</span>
 <span class="c1">//   (None, List()),</span>
-<span class="c1">//   (Some("Levi"), List("librarian-doc/person/12345")),</span>
-<span class="c1">//   (Some("Yoshio"), List("librarian-doc/person/123")),</span>
-<span class="c1">//   (Some("San Jos\u00e9 de Maipo"), List("librarian-doc/place/123")),</span>
-<span class="c1">//   (Some("Kevin"), List("librarian-doc/person/34567")),</span>
-<span class="c1">//   (Some("Talca"), List("librarian-doc/place/34567")),</span>
-<span class="c1">//   (Some("Stan"), List("librarian-doc/person/567"))</span>
+<span class="c1">//   (Some(value = "Levi"), List("librarian-doc/person/12345")),</span>
+<span class="c1">//   (Some(value = "Yoshio"), List("librarian-doc/person/123")),</span>
+<span class="c1">//   (Some(value = "San Jos\u00e9 de Maipo"), List("librarian-doc/place/123")),</span>
+<span class="c1">//   (Some(value = "Kevin"), List("librarian-doc/person/34567")),</span>
+<span class="c1">//   (Some(value = "Talca"), List("librarian-doc/place/34567")),</span>
+<span class="c1">//   (Some(value = "Stan"), List("librarian-doc/person/567"))</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 <h4 id="count">Count</h4>
@@ -879,17 +879,17 @@ g.N.out("balance").hasLabel(`@double`).mean.withGraph(graph).head //should be 62
 <p>TimeLimit-step limits the amount of time the rest of the traversal may take</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">g</span><span class="o">.</span><span class="py">N</span><span class="o">.</span><span class="py">timeLimit</span><span class="o">(</span><span class="mi">20</span><span class="o">).</span><span class="py">withGraph</span><span class="o">(</span><span class="n">graph</span><span class="o">).</span><span class="py">toList</span>
 <span class="c1">// res61: List[Node] = List(</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e505,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e409,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44f,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4d4,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e499,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e465,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e509,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e44a,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e51b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e421,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4e2,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e46a,</span>
 <span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3ec,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e42d,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e471,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f3,</span>
-<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4bd</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4f7,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e4b9,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e47b,</span>
+<span class="c1">//   lspace.provider.mem.MemGraph$$anon$7@5db0e3fc</span>
 <span class="c1">// )</span>
 </code></pre></div></div>
 </section></div></div></div></div><script src="/highlight/highlight.pack.js"></script><script>
