@@ -21,7 +21,7 @@ object Dependencies {
       "com.chuusai" %%% "shapeless"      % "2.3.3",
 //      "org.typelevel" %%% "squants"        % "1.5.0",
 //      "org.typelevel" %%% "spire"          % "0.16.0",
-      "com.outr"          %%% "scribe"          % "3.1.8",
+      "com.outr"          %%% "scribe"          % "3.1.9",
       "org.scalatest"     %%% "scalatest"       % Version.scalatest % "test",
       "io.monix"          %%% "minitest"        % Version.minitest  % "test",
       "io.github.cquiroz" %%% "scala-java-time" % "2.1.0"
