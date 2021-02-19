@@ -8,7 +8,7 @@ object Version {
   val tapir     = "0.16.1"
   val elastic4s = "7.9.1"
   val phantom   = "2.59.0"
-  val scalatest = "3.2.3"
+  val scalatest = "3.2.5"
   val minitest  = "2.9.1"
 }
 
