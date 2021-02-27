@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion := "2.13.3"
+ThisBuild / scalaVersion := "2.13.5"
 
 lazy val settings = commonSettings
 
@@ -54,8 +54,8 @@ lazy val commonSettings = projectSettings ++ Seq(
     case Some((2, scalaMajor)) if scalaMajor > 12 => Nil
     case _                                        => Seq("-Ypartial-unification")
   }),
-  scalaVersion := "2.13.3",
-  crossScalaVersions := Seq("2.12.12", "2.13.3"),
+  scalaVersion := "2.13.5",
+  crossScalaVersions := Seq("2.12.12", "2.13.5"),
   publishArtifact in (Test, packageBin) := true,
   updateOptions := updateOptions.value.withCachedResolution(true)
 )
