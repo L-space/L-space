@@ -55,7 +55,7 @@ lazy val commonSettings = projectSettings ++ Seq(
     case _                                        => Seq("-Ypartial-unification")
   }),
   scalaVersion := "2.13.3",
-  crossScalaVersions := Seq("2.12.12", "2.13.3"),
+  crossScalaVersions := Seq("2.12.13", "2.13.3"),
   publishArtifact in (Test, packageBin) := true,
   updateOptions := updateOptions.value.withCachedResolution(true)
 )
