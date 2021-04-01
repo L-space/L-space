@@ -9,7 +9,7 @@ object Version {
   val elastic4s = "7.9.1"
   val phantom   = "2.59.0"
   val scalatest = "3.2.3"
-  val minitest  = "2.9.1"
+  val minitest  = "2.9.4"
 }
 
 object Dependencies {
