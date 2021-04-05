@@ -24,7 +24,7 @@ object Dependencies {
       "com.outr"          %%% "scribe"          % "3.1.8",
       "org.scalatest"     %%% "scalatest"       % Version.scalatest % "test",
       "io.monix"          %%% "minitest"        % Version.minitest  % "test",
-      "io.github.cquiroz" %%% "scala-java-time" % "2.1.0"
+      "io.github.cquiroz" %%% "scala-java-time" % "2.2.1"
     )
   )
 
