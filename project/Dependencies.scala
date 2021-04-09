@@ -18,7 +18,7 @@ object Dependencies {
     Seq(
       "eu.l-space"  %%% "types"          % "0.0.4.6",
       "io.monix"    %%% "monix-reactive" % Version.monix,
-      "com.chuusai" %%% "shapeless"      % "2.3.3",
+      "com.chuusai" %%% "shapeless"      % "2.3.4",
 //      "org.typelevel" %%% "squants"        % "1.5.0",
 //      "org.typelevel" %%% "spire"          % "0.16.0",
       "com.outr"          %%% "scribe"          % "3.1.8",
