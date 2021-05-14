@@ -3,7 +3,7 @@ import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 object Version {
   val finch     = "0.32.1"
-  val monix     = "3.3.0"
+  val monix     = "3.4.0"
   val sttp      = "2.2.9"
   val tapir     = "0.16.1"
   val elastic4s = "7.9.1"
